@@ -1,0 +1,19 @@
+.container{
+    margin: auto;
+    width: 1300px;
+    @include respond-to(xxs){
+        width: 100%;
+    }
+    @include respond-to(xs){
+        width: 100%;
+    }
+    @include respond-to(sm){
+        width: 100%;
+    }
+    @include respond-to(md){
+        width: 100%;
+    }
+    @include respond-to(lg){
+        width: 100%;
+    }
+}

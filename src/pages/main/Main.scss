@@ -1,0 +1,14 @@
+@import '../../scss/global/global';
+
+section{
+    padding: $PADDING;
+    text-align: center;
+    &.blue{
+        background: $WSD-BLUE;
+        color: white;
+    }
+    &.orange{
+        background: $WSD-ORANGE;
+        color: white;
+    }
+}
