@@ -1,8 +1,7 @@
 @import '../../scss/global/global';
 
 section{
-    padding: $PADDING;
-    text-align: center;
+
     &.blue{
         background: $WSD-BLUE;
         color: white;
@@ -10,5 +9,21 @@ section{
     &.orange{
         background: $WSD-ORANGE;
         color: white;
+    }
+    &.red{
+        background: $WSD-RED;
+        color: white;
+    }
+    &.purple{
+        background: $WSD-PURPLE;
+        color: white;
+    }
+
+    .container{
+        .service-img{
+            img{
+                width: 100%;
+            }
+        }
     }
 }

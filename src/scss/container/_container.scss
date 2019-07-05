@@ -1,6 +1,10 @@
+@import '../variables/variables';
+
 .container{
     margin: auto;
     width: 1300px;
+    padding: $PADDING;
+    
     @include respond-to(xxs){
         width: 100%;
     }
