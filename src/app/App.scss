@@ -1,0 +1,24 @@
+@import '../scss/global/global';
+
+$FOOTER-HEIGHT: 100px;
+
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;  
+    background: $WSD-GREY-LIGHT;
+    font-size: 18px !important;
+    font-family: Arial, sans-serif !important;
+}
+
+#root, .App{
+    height: 100%;
+}
+
+.wrap{
+    min-height: calc(100% - #{$FOOTER-HEIGHT});
+}
+
+footer{
+    height: $FOOTER_HEIGHT;
+}

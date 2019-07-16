@@ -1,0 +1,17 @@
+[
+    {
+        "img": "1.png",
+        "title": "First slide label",
+        "info": "test 1"
+    },
+    {
+        "img": "2.png",
+        "title": "First slide label",
+        "info": "test 1"
+    },
+    {
+        "img": "3.png",
+        "title": "First slide label",
+        "info": "test 1"
+    }
+]

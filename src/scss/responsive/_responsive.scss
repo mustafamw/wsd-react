@@ -17,6 +17,6 @@
     @media (min-width: $screen-lg) and (max-width: $screen-lg-max) { @content }
   }
   @else if $media == xl {
-    @media (max-width: $screen-xl) { @content }
+    @media (min-width: $screen-xl) { @content }
   }
 }

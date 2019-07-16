@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import '../scss/App.scss';
+import './App.scss';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Main from '../pages/main/Main';
-import AboutUs from '../pages/about-us/AboutUs';
+import Service from '../pages/service/Service';
+import Quotes from '../pages/quotes/Quotes';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
@@ -11,12 +12,13 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Header />
+          <Header/>
           <div className="wrap">
             <Route path="/" exact component={Main} />
-            <Route path="/about/" exact component={AboutUs} />
+            <Route path="/services/" exact component={Service} />
+            <Route path="/quotes/" exact component={Quotes} />
           </div>
-          <Footer />
+          <Footer/>
         </Router>
       </div>
     );

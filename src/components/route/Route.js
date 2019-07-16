@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 import { BrowserRouter as Route, Link } from "react-router-dom";
+import './Route.scss';
 
 class Routes extends Component{
   render(){
     return (
-      <div>
+      <div className="nav-links">
         <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about/">About</Link>
+              <Link to="/services/">Services</Link>
             </li>
             <li>
-              <Link to="/users/">Users</Link>
+              <Link to="/quotes/">Quotes</Link>
+            </li>
+            <li>
+              <Link to="/users/">Contact us</Link>
             </li>
           </ul>
         </nav>

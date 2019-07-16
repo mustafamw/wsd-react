@@ -1,0 +1,33 @@
+@import '../../scss/global/global';
+
+.quote-list{
+    display: flex;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    background: #717171;
+    color: white;
+    box-shadow: 0px 0px 6px #676767;
+    .image{
+        position: relative;
+        overflow: hidden;
+        background: white;
+        img{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            @include respond-to(xxs){
+                position: relative;
+            }
+        }
+    }
+    ul{
+        margin-top: 15px;
+    }
+    @include respond-to(xxs){
+        display: block;
+    }
+}

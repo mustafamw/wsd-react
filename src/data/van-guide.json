@@ -1,0 +1,67 @@
+[
+    {
+        "name": "SMALL VAN",
+        "title": "Small Van",
+        "img": "small.png",
+        "info": "The Small Van is most commonly used for luggage and parcel transfers, Small vans can hold up to 8 packed suitcases. The perfect van size for 1 persons luggage and easy parking.",
+        "details": [
+            "Length: 1.2 m  / 3.5 ft",
+            "Width: 1.49 m  / 4.8 ft",
+            "Height: 1.2 m / 3.9 ft",
+            "Payload: 600-900 kg",
+            "Seats (inc driver): 2"
+        ]
+    },
+    {
+        "name": "MEDIUM VAN",
+        "title": "Medium Van",
+        "img": "medium.png",
+        "info": "The Medium Van offers a usefully Large load area without being much longer or wider than a large car. The perfect solution for transporting two peoples belongings or sofa collections.",
+        "details": [
+            "Length: 2.4 m  / 7.8 ft",
+            "Width: 1.7 m  / 5 ft",
+            "Height: 1.4 m / 4 ft",
+            "Payload: 1200 kg",
+            "Seats (inc driver): 3"
+        ]
+    },
+    {
+        "name": "LARGE VAN",
+        "title": "Large Van",
+        "img": "large.png",
+        "info": "The LWB High Top Van offers a larger internal load space than any other panel van on the road and comes with a side loading door allowing for easy loading and unloading in tight locations, making this Van perfect for 1 -2 bedroom flat moves, business to business deliverys and local storage/store collections. By far most popular Van in the Man and Van industry.",
+        "details": [
+            "Length: 3.4 m  / 11.1 ft",
+            "Width: 1.7 m  / 5 ft",
+            "Height: 1.7 m / 5ft",
+            "Payload: 1200-1500 kg",
+            "Seats (inc driver): 3"
+        ]
+    },
+    {
+        "name": "EXTRA LARGE VAN",
+        "title": "Extra Large Van",
+        "img": "extra-large.png",
+        "info": "When smaller and medium-size vans do not offer enough space for trade, business or personal needs, extra large van hire is the answer. These spacious solutions provide between 15 and 17 cubic metres of room for payloads, making them ideal for self-organised home and office moves, as well as for business events.",
+        "details": [
+            "Length: 3.4 m  / 11.1 ft",
+            "Width: 1.7 m  / 5 ft",
+            "Height: 1.7 m / 5ft",
+            "Payload: 1200-1500 kg",
+            "Seats (inc driver): 3"
+        ]
+    },
+    {
+        "name": "LUTON LARGE VAN",
+        "title": "Luton Large Van",
+        "img": "luton.png",
+        "info": "The Luton Van is the champion of 3 bedroom flat/house removals, office relocations and heavy item moves. The Luton Van provides superb flexibility for bulky items such as furniture and crates. Unlike panel vans, the entire load space is above the rear wheels, so the internal wheel arches don't interfere with your loading space. There is no better van for fitting everything in.",
+        "details": [
+            "Length: 4.0 m  / 13.1 ft",
+            "Width: 2.0 m  / 6.5 ft",
+            "Height: 2.2 m  / 7.2 ft",
+            "Payload: 1200-1600 kg",
+            "Seats (inc driver): 3"
+        ]
+    }
+]

@@ -18,12 +18,65 @@ section{
         background: $WSD-PURPLE;
         color: white;
     }
+    &.white{
+        background: $WSD-WHITE;
+        color: black;
+    }
 
     .container{
-        .service-img{
+        .van-image{
+            float: right;
             img{
                 width: 100%;
             }
+            @include respond-to(xxs){
+                float: left;
+            }
+        }
+        .van-info{
+            @include respond-to(xxs){
+                float: right;
+            }
+        }
+        .service-img{
+            margin-bottom: -30px;
+            img{
+                width: 100%;
+            }
+        }
+        .van-container{
+            margin-bottom: 10px;
+            cursor: pointer;
+            img{
+                width: 100%;
+                border: 2px solid #f3f3f3;
+            }
+            .title{
+                background: #000000ab;
+                border: 2px solid #545454;
+                color: white;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+        .van-container:hover{
+            img{
+                border: 2px solid black;
+            }
+            .title{
+                background: black;
+                border: 2px solid black;
+            }
+        }
+    }
+    &.address-info{
+        background: url('../../assets/img/resource/warehouse.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        .container{
+            background: #000000bd;
         }
     }
 }

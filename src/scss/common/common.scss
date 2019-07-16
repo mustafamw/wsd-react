@@ -1,3 +1,5 @@
+@import '../variables/variables';
+
 .clear-both{
     clear: both;
 }
@@ -13,3 +15,64 @@
 .text-align-right{
     text-align: right;
 }
+
+.display-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include respond-to(xxs){
+        display:block;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8{
+    font-weight: bold;
+    padding-top: $PADDING;
+    padding-bottom: $PADDING;
+    margin: 0px;
+    line-height: initial;
+}
+
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1em;
+}
+h4{
+    font-size: 0.8em;
+}
+h5{
+    font-size: 0.6em;
+}
+h6{
+    font-size: 0.4em;
+}
+
+.padding-top{
+    padding-top: 5px;
+}
+
+.padding-bottom{
+    padding-bottom: 5px;
+}
+
+.no-padding-top{
+    padding-top: 0px;
+}
+
+.no-padding-bottom{
+    padding-bottom: 0px;
+}
+
+.no-padding-right{
+    padding-right: 0px;
+}
+
+.no-padding-left{
+    padding-left: 0px;
+}
+
