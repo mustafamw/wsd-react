@@ -7,8 +7,14 @@ html, body{
     margin: 0px;
     padding: 0px;  
     background: $WSD-GREY-LIGHT;
-    font-size: 18px !important;
+    font-size: 20px !important;
+    color: white;
     font-family: Arial, sans-serif !important;
+    background: url('../assets/img/background/background.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #root, .App{

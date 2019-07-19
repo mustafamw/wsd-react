@@ -24,7 +24,7 @@ class Header extends Component {
       <header>
           <div className="container"> 
             <div className="display-flex nav-container">
-              <div className="col-12 padding-top padding-bottom">
+              <div className="col-12 padding-top-5px padding-bottom-5px">
                 <div className="nav-logo">
                   <Link to="/">
                     <div className="logo">

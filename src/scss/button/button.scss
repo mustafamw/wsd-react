@@ -4,4 +4,16 @@ button{
     width: 100%;
     border: none;
     margin-bottom: 10px;
+
+    &.blue{
+        background: #0070c7;
+        color: white;
+        font-weight: bold;
+    }
+
+    &.blue:hover{
+        background: #0090ff;
+        color: white;
+        font-weight: bold;
+    }
 }

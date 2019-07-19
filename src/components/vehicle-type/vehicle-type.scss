@@ -1,0 +1,43 @@
+ul.vehicle{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+    li{
+        background: #012635;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        border-bottom: 1px solid #464646;
+        cursor: pointer;
+        .image{
+            position: relative;
+            background: white;
+            img{
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+                margin: auto;
+                width: 100%;
+            }
+        }
+        .info{
+            padding: 10px;
+        }
+    }
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        &.popup{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+        }
+    }
+}

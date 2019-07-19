@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import forklift from '../../assets/img/services/forklift-van.jpg';
 import hourService from '../../assets/img/services/24-hours-service.png';
-import ukDelivery from '../../assets/img/services/uk-delivery.png';
+import ukDelivery from '../../assets/img/services/uk.png';
 import './Service.scss';
 
 class Service extends Component {
@@ -11,8 +11,8 @@ class Service extends Component {
         <section>
           <div className="container">
             <div className="display-flex">
-              <div class="col-8">
-                <div class="info">
+              <div className="col-8">
+                <div className="info">
                   <h1>
                     Services we deliver
                   </h1>
@@ -35,8 +35,8 @@ class Service extends Component {
                   </p>
                 </div>
               </div>
-              <div class="col-4 padding-top">
-                <div class="images">
+              <div className="col-4 padding-top-5px">
+                <div className="images">
                   <img src={forklift}/>
                   <img src={hourService}/>
                   <img src={ukDelivery}/>

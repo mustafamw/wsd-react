@@ -25,7 +25,7 @@ class Slider extends Component {
   render() {
     const { index, direction } = this.state;
 
-    const carouselItems = slider.map((e)=>{
+    const carouselItems = slider.map((e, index)=>{
       const img = require(`../../assets/img/slider/${e.img}`);
       const divStyle = {
         "background": `url(${img}) no-repeat center center fixed`,
@@ -38,7 +38,7 @@ class Slider extends Component {
         <Carousel.Item className="carousel-slider-item" style={divStyle} alt={e.title}>
           <div className="container">
             <Carousel.Caption>
-              <h2>{e.title}</h2>
+              <h1>{e.title}</h1>
               <p>{e.info}</p>
             </Carousel.Caption>
           </div>
