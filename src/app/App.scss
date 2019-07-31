@@ -9,12 +9,12 @@ html, body{
     background: $WSD-GREY-LIGHT;
     font-size: 20px !important;
     color: white;
-    font-family: Arial, sans-serif !important;
     background: url('../assets/img/background/background.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Oxygen', sans-serif !important;
 }
 
 #root, .App{
@@ -23,8 +23,4 @@ html, body{
 
 .wrap{
     min-height: calc(100% - #{$FOOTER-HEIGHT});
-}
-
-footer{
-    height: $FOOTER_HEIGHT;
 }

@@ -4,7 +4,6 @@ ul.vehicle{
     list-style: none;
     margin: 0px;
     padding: 0px;
-    border: 1px solid black;
     li{
         background: #012635;
         color: white;
@@ -26,7 +25,7 @@ ul.vehicle{
             }
         }
         .info{
-            padding: 10px;
+            padding: 12px;
         }
     }
     ul{
@@ -38,6 +37,13 @@ ul.vehicle{
             position: absolute;
             left: 0px;
             right: 0px;
+            z-index: 1;
+            bottom: 0;
+        }
+        &.non-popup{
+            li{
+                border-bottom: 0px;
+            }
         }
     }
 }

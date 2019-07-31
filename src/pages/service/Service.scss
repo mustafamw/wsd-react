@@ -1,11 +1,21 @@
+@import '../../scss/global/global';
+
 article{
     section{
-        .images{
+        img{
+            width: 100%;
+        }
+        .uk,
+        .globe{
+            padding-top: 20px;
             img{
-                width: 100%;
-                border: 2px solid black;
-                margin-bottom: 3px;
-                background: #ebebeb;
+                width: 60%;
+            }
+        }
+        .uk.text-align-right,
+        .globe.text-align-right{
+            @include respond-to(xxs){
+                text-align: center;
             }
         }
     }

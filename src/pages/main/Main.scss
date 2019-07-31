@@ -24,6 +24,14 @@ section{
     }
 
     .container{
+        .text-align-center{
+            @include respond-to(xs){
+                text-align: left;
+            }
+            @include respond-to(xxs){
+                text-align: left;
+            }
+        }
         .van-image{
             float: right;
             img{
@@ -39,10 +47,21 @@ section{
                 float: right;
             }
         }
-        .service-img{
-            margin-bottom: -30px;
-            img{
-                width: 100%;
+        .services-container{
+            .service-img{
+                margin-bottom: -30px;
+                img{
+                    width: 100%;
+                }
+            }
+            h3{
+                padding-bottom: 5px;
+            }
+            small{
+                float: left;
+                line-height: 20px;
+                margin-bottom: 15px;
+                font-style: italic;
             }
         }
         .van-list{
@@ -79,13 +98,19 @@ section{
         p{
             text-shadow: 0px 0px 1px #fff;
         }
+        .need-today{
+            h3{
+                text-decoration: underline;
+            }
+        }
     }
     &.address-info{
-        background: url('../../assets/img/resource/warehouse.jpg') no-repeat center center fixed; 
+        background: url('../../assets/img/resource/warehouse.jpg'); 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-position: center; 
         .container{
             background: #000000bd;
         }

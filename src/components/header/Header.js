@@ -9,7 +9,7 @@ class Header extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {show: true};
+    this.state = {show: false};
   }
 
   render(){
@@ -31,7 +31,8 @@ class Header extends Component {
                       <img src={logo}/>
                     </div>
                     <div className="title">
-                      <span className="orange">WSD</span> Courier & Cargo
+                      <span className="orange">WSD</span> Courier & Cargo<br/>
+                      <small>Same day delivery specialist</small>
                     </div>
                   </Link>
                 </div>

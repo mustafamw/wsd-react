@@ -2,5 +2,29 @@
 
 footer{
     color: white;
-    background: black;
+    background: #040f29;
+    .container{
+        h4{
+            border-bottom: 1px solid #1ac5ff;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            float: left;
+            clear: both;
+        }
+        small{
+            clear: both;
+            width: 100%;
+            float: left;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        a{
+            color: white;
+            text-decoration: underline;
+        }
+        a:hover{
+            color: white;
+            text-decoration: none;
+        }
+    }
 }

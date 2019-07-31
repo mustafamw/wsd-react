@@ -18,7 +18,7 @@ class Routes extends Component{
               <Link to="/quotes/">Quotes</Link>
             </li>
             <li>
-              <Link to="/users/">Contact us</Link>
+              <Link to="/contact-us/">Contact us</Link>
             </li>
           </ul>
         </nav>

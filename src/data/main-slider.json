@@ -1,17 +1,22 @@
 [
     {
         "img": "1.png",
-        "title": "Need a Service?",
-        "info": "WSD Couriers are a same day courier service based in Walsall, West midlands. Situated very close to major motorways M6 & M5"
+        "title": "Same Day Guaranteed",
+        "info": "Our customers expect us to deliver everyday. We take this very seriously and recognise that we are an extension of our client."
     },
     {
-        "img": "2.png",
+        "img": "6.png",
         "title": "Great Experience",
-        "info": "With  over 10 years of experience and a network of approved couriers, a professional delivery service is provided throughout the UK."
+        "info": "With  over 10 years of experience and a network of approved couriers, a professional delivery service is provided throughout the UK, Europe & World Wide Cargo."
     },
     {
-        "img": "3.png",
-        "title": "First slide label",
-        "info": "test 1"
+        "img": "4.png",
+        "title": "Our Special Services",
+        "info": "Our company aims to be not only your logistics partner but also your family and that is why we are willing to go an extra mile just so we would be able to bring a smile on your face."
+    },
+    {
+        "img": "6.png",
+        "title": "Customer Satisfaction",
+        "info": "Understanding our customers’ priorities, issues and strategies helps us to design logistics solutions that best fit their needs and to invest in the right technology to deliver tangible benefits to their business."
     }
 ]

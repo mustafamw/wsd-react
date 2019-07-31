@@ -12,11 +12,13 @@ header{
         float: left;
         .logo{
             float: left;
+            margin-top: 8px;
             margin-right: 5px;
             img{
                 width: 70px;
                 @include respond-to(xxs){
                     width: 50px;
+                    margin-top: -2px;
                 }
             }
         }
@@ -31,8 +33,18 @@ header{
             }
             @include respond-to(xxs){
                 padding-top: 15px;
-                width: 230px;
-                font-size: 15px;
+                width: 300px;
+                font-size: 17px;
+            }
+            small{
+                font-size: 14px;
+                position: relative;
+                top: -10px;
+                font-style: italic;
+                @include respond-to(xxs){
+                    font-size: 12px;
+                    top: -6px;
+                }
             }
         }
         a{

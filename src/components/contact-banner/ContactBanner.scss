@@ -1,0 +1,32 @@
+@import '../../scss/global/global';
+
+.contact-banner{
+    background: #040f29;
+    width: 100%;
+    clear: both;
+    font-size: 15px;
+    padding: 2px;
+    .shares{
+        float: right;
+        margin-top: -1px;
+        .share{
+            margin-right: 3px;
+            float: left;
+            img{
+                width: 20px;
+            }
+        }
+        .share:first-child{
+            margin-left: 5px;
+        }
+        @include respond-to(xxs){
+            float: left;
+        } 
+    }
+    .text-align-center,
+    .text-align-right{
+        @include respond-to(xxs){
+            text-align: left;
+        }   
+    }
+}

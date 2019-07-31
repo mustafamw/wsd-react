@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 import './Footer.scss';
 
 class Footer extends Component {
@@ -6,8 +7,36 @@ class Footer extends Component {
     return (
       <footer>
         <div className="container">
-          <div className="col-12">
-            <h1></h1>
+          <div className="display-flex">
+            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"> 
+              <h4>CONTACT US</h4>
+              <div className="clear-both"></div>
+              <small>
+                info@wsdcourierservices.co.uk<br/>
+                01922 610216<br/>
+                07861304990
+              </small>
+            </div>
+            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+              <h4>BUSINESS ADDRESS</h4>
+              <div className="clear-both"></div>
+              <small>
+                Unit 19 New firms Centre<br/>
+                Fairground Way<br/>
+                Walsall<br/>
+                WS1 4NU
+              </small>
+            </div>
+            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+              <h4>QUICK LINKS</h4>
+              <div className="clear-both"></div>
+              <small>
+                <Link to="/terms-and-conditions">Terms and Conditions</Link><br/>
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </small>
+            </div>
+            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            </div>
           </div>
         </div>
       </footer>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import forklift from '../../assets/img/services/forklift-van.jpg';
-import hourService from '../../assets/img/services/24-hours-service.png';
 import ukDelivery from '../../assets/img/services/uk.png';
+import globe from '../../assets/img/services/globe.png';
 import './Service.scss';
 
 class Service extends Component {
@@ -11,40 +10,51 @@ class Service extends Component {
         <section>
           <div className="container">
             <div className="display-flex">
-              <div className="col-8">
-                <div className="info">
+                <div className="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12">
                   <h1>
-                    Services we deliver
+                    National Courier Service
                   </h1>
-                  <h3>
-                    A nationwide fast and secure sameday courier service
-                    Customer satisfaction is always important for us
-                  </h3>
                   <p>
-                    <h4>Same day, next day, urgent courier service includes:</h4>
                     <ul>
-                      <li>A nationwide sameday service operating 24/7 & 365, with fast, secure and affordable courier delivery giving client a peace of mind.</li>
-                      <li>We provide urgent and business critical collection within one hour time.</li>
-                      <li>Our sameday service means that you can rely on secure and timely nationwide deliveries any day of the year.</li>
-                      <li>We respond quickly to your urgent and time critical delivery needs.</li>
-                      <li>As same day courier, we aim to provide you with the best courier service nationwide, on demand, any time of the day or night.</li> 
-                      <li>We can provide you courier service and manage your regular, daily, weekly or monthly basis deliveries.</li>
-                      <li>We provide door to door collection and delivery service at competitive prices.</li> 
-                      <li>We will take care of your special deliveries.</li>
+                      <li>Urgent same day deliveries</li>
+                      <li>Local or National Timed deliveries</li>
+                      <li>Vehicle Tracking</li>
+                      <li>Quick response times</li>
+                      <li>All loads direct, Door-to-Door</li>
+                      <li>Proof of delivery</li>
+                      <li>From an envelope to pallet loads</li>
+                      <li>24hrs - 365 days a year </li>
                     </ul>
                   </p>
                 </div>
-              </div>
-              <div className="col-4 padding-top-5px">
-                <div className="images">
-                  <img src={forklift}/>
-                  <img src={hourService}/>
+                <div className="col-xl-6 col-lg-6 col-md-4 col-sm-4  col-12 uk text-align-right">
                   <img src={ukDelivery}/>
                 </div>
-
+              </div>
+              <div className="display-flex">
+                
+                <div className="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12">
+                  <h1>
+                    World Wide Cargo Service
+                  </h1>
+                  <p>
+                    <ul>
+                      <li>Urgent same day deliveries</li>
+                      <li>Local or National Timed deliveries</li>
+                      <li>Vehicle Tracking</li>
+                      <li>Quick response times</li>
+                      <li>All loads direct, Door-to-Door</li>
+                      <li>Proof of delivery</li>
+                      <li>From an envelope to pallet loads</li>
+                      <li>24hrs - 365 days a year </li>
+                    </ul>
+                  </p>
+                </div>
+                <div className="col-xl-6 col-lg-6 col-md-4 col-sm-4  col-12 globe text-align-right">
+                  <img src={globe}/>
+                </div>
               </div>
             </div>
-          </div>
         </section>
       </article>
     );

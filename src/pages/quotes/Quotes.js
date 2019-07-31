@@ -39,6 +39,12 @@ class Quotes extends Component {
                         </div>
                     </div>
                 </section>
+                <section>
+                    <div className="container quotes">
+                        Please note other vehicles are available upon request
+                        <button>Please contact one of our team</button>
+                    </div>
+                </section>
             </article>
         );
     }
