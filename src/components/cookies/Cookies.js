@@ -24,7 +24,7 @@ class Cookies extends Component {
       !this.state.showCookiesBanner ? <div className="cookie-banner">
         <div className="container">
           <div className="display-flex">
-            <div className="col-xl-11 col-lg-11 col-md-10 col-sm-10 col-12"> 
+            <div className="col-xl-11 col-lg-11 col-md-10 col-sm-10 col-12 info no-padding-left"> 
               By clicking "Accept" or continuing to use our site, you acknowledge that you accept our <Link to="/terms-and-conditions">Terms and Conditions</Link> & <Link to="/privacy-policy">Privacy Policy</Link>.
             </div>
             <div className="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12 no-padding-left no-padding-right"> 

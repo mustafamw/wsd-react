@@ -1,3 +1,5 @@
+@import '../../scss/global/global';
+
 .cookie-banner{
     position: fixed;
     background: #000000cf;
@@ -6,9 +8,18 @@
     color: white;
     z-index: 10001;
     padding: 10px;
-
+    padding-left: 15px;
+    padding-right: 15px;
+    
     .button{
         margin-top: 5px;
+    }
+
+    .info{
+        @include respond-to(xxs){
+           padding-left: 0px;
+           padding-right: 0px;
+        } 
     }
 }
 
