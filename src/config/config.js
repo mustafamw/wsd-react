@@ -1,3 +1,3 @@
 export const Config = {
-    GOOGLEMAPAPIKEY: 'AIzaSyB2KxXTGhF063H3wzaPMVCYAwi46Z2r_8U'
+    GOOGLEMAPAPIKEY: 'AIzaSyC2vwoyuIB_jYngpeA4hfD5U_0k6wUq2yk'
 };

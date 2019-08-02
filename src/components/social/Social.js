@@ -10,18 +10,15 @@ class Social extends Component{
     return (
         <div id="shares" class="shares">
             <div class="share">
-                <img src={facebook} alt="" srcset="" id="fb-share-button"/>
-            </div>
-            <div class="share">
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=wsdcourierservices {{fullUrlPath}}." target="_blank">
-                    <img src={twitter} alt="" srcset=""/>
+                <a href="https://www.facebook.com/WSD-Courier-Cargo-103429197673948/" target="_blank">
+                    <img src={facebook} alt="Facebook" srcset="" id="fb-share-button"/>
                 </a>
             </div>
             <div class="share"
                 tooltip 
                 tooltip-title="Instagram">
-                <a href="https://www.instagram.com/wsdcourierservices/?hl=en" target="_blank">
-                    <img src={instagram} alt="" srcset=""/>
+                <a href="https://www.instagram.com/Wsd_courier/" target="_blank">
+                    <img src={instagram} alt="Instagram" srcset=""/>
                 </a>
             </div>
         </div>

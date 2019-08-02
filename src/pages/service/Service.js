@@ -23,7 +23,7 @@ class Service extends Component {
                       <li>All loads direct, Door-to-Door</li>
                       <li>Proof of delivery</li>
                       <li>From an envelope to pallet loads</li>
-                      <li>24hrs - 365 days a year </li>
+                      <li>Any size Van to suit you</li>
                     </ul>
                   </p>
                 </div>
@@ -39,14 +39,10 @@ class Service extends Component {
                   </h1>
                   <p>
                     <ul>
-                      <li>Urgent same day deliveries</li>
-                      <li>Local or National Timed deliveries</li>
-                      <li>Vehicle Tracking</li>
-                      <li>Quick response times</li>
-                      <li>All loads direct, Door-to-Door</li>
-                      <li>Proof of delivery</li>
-                      <li>From an envelope to pallet loads</li>
-                      <li>24hrs - 365 days a year </li>
+                      <li>Door to Door</li>
+                      <li>Door to Airport</li>
+                      <li>Excess Baggage</li>
+                      <li>Personal effects</li>
                     </ul>
                   </p>
                 </div>

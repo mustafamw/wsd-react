@@ -24,12 +24,10 @@ section{
     }
 
     .container{
-        .text-align-center{
-            @include respond-to(xs){
-                text-align: left;
-            }
+        .grid-title{
+            text-align: left;
             @include respond-to(xxs){
-                text-align: left;
+                text-align: center;
             }
         }
         .van-image{

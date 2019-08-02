@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Route, Link } from "react-router-dom";
+import Social from '../social/Social';
 import './Footer.scss';
 
 class Footer extends Component {
@@ -13,7 +14,7 @@ class Footer extends Component {
               <div className="clear-both"></div>
               <small>
                 info@wsdcourierservices.co.uk<br/>
-                01922 610216<br/>
+                01922610216<br/>
                 07861304990
               </small>
             </div>
@@ -35,7 +36,12 @@ class Footer extends Component {
                 <Link to="/privacy-policy">Privacy Policy</Link>
               </small>
             </div>
-            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 social-network">
+              <h4>SOCIAL NETWORK</h4>
+              <div className="clear-both"></div>
+              <small>
+                <Social/>
+              </small>
             </div>
           </div>
         </div>

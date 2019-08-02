@@ -26,5 +26,16 @@ footer{
             color: white;
             text-decoration: none;
         }
+        .social-network{
+            small{
+                .shares{
+                    display: flex;
+                    img{
+                        width: 45px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
     }
 }

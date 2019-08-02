@@ -29,4 +29,7 @@
             text-align: left;
         }   
     }
+    @include respond-to(xxs){
+        font-size: 14px;
+    } 
 }

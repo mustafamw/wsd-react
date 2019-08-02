@@ -32,7 +32,7 @@ class Header extends Component {
                     </div>
                     <div className="title">
                       <span className="orange">WSD</span> Courier & Cargo<br/>
-                      <small>Same day delivery specialist</small>
+                      <small>Same day delivery specialists</small>
                     </div>
                   </Link>
                 </div>

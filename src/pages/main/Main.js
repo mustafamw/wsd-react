@@ -53,7 +53,7 @@ class Main extends Component{
           <div className="container">
             <div>
               <div className="col-12"> 
-                <h2 className="text-align-center">Who we are</h2>
+                <h2 className="text-align-center">About us</h2>
               </div>
               <div className="display-flex">
                 <div className="col-xl-6 col-md-6 col-sm-6 col-xs-12 col-12 van-info">
@@ -97,46 +97,45 @@ class Main extends Component{
           <div className="container">
             <div className="display-flex">
               <div className="col-xl-3 col-md-6 col-sm-6 col-xs-6 col-12">
-                <h2>Assurance & Quality</h2>
+                <h2 className="grid-title">Assurance & Quality</h2>
                 <p>
                   WSD Courier & Cargo has been proudly providing high quality same day and next day deliveries through out the UK in a secure and timely manner since 2009.
                 </p>
               </div>
               <div className="col-xl-3 col-md-6 col-sm-6 col-xs-6 col-12">
-                <h2>Wild Network</h2>
+                <h2 className="grid-title">Wild Network</h2>
                 <p>
-                  As part of courier network we have access to over 2500 drivers giving us the ability to collect and deliver anywhere in the UK
+                  As part of courier network we have access to over 2300 drivers giving us the ability to collect and deliver anywhere in the UK
                 </p>
               </div>
               <div className="col-xl-3 col-md-6 col-sm-6 col-xs-6 col-12">
-                <h2>Meet your standards</h2>
+                <h2 className="grid-title">Meet your standards</h2>
                 <p>
                   WSD Courier & Cargo offer a range of courier services for customers to suit individual needs. Our dedicated team take pride in delivering every 
-                  parcel with care on time, every time. Whether you are sending personal items or business use items, our courier services guarantee to offer 
-                  fantastic value for money.
+                  parcel with care on time, every time. Our courier services guarantee to offer fantastic value for money.
                 </p>
               </div>
               <div className="col-xl-3 col-md-6 col-sm-6 col-xs-6 col-12">
-                <h2>Fully Tracked Vehicles</h2>
+                <h2 className="grid-title">Fully Tracked Vehicles</h2>
                 <p>
-                 We are able to track out vehicles through smart phones and online tracking system.
+                 We are able to track our vehicles through smart phones and online tracking system.
                 </p>
               </div>
             </div>
             <div className="clear-both"></div>
           </div>
         </section>
-        <section className="orange">
+        <section className="orange"> 
           <div className="container">
             <div className="display-flex">
               <div className="col-xl-6 col-12">
-                <h2>Going the Extra Mile</h2>
+                <h2 className="grid-title">Going the Extra Mile</h2>
                 <p>
-                  Whether you use our same day delivery or another option, we aim to give  you complete peace of mind.
+                  Whether you use our same day delivery or another option, we aim to give  you complete peace of mind. Be sure that we will meet your customer deadlines enhancing your lead times.
                 </p>
               </div>
               <div className="col-xl-6 col-12">
-              <h2>Flexibility and Dedication</h2>
+              <h2 className="grid-title">Flexibility and Dedication</h2>
                 <p>
                   It’s no problem if you require any last minute changes to your delivery. We can alter the delivery schedules or routes as required. 
                   Same day delivery is our speciality, we have been doing it since 2009!   
@@ -150,12 +149,12 @@ class Main extends Component{
           <div className="container">
             <div className="display-flex">
               <div className="col-12 text-align-center need-today">
-                <h2>Need it there today?</h2>
+                <h2 className="text-align-center">Need it there today?</h2>
                 <p>
                   Of course you do! For a quick, reliable delivery today, all you need do is call. Our highly trained team can find you the perfect solution right now.
                   We’re known for being a friendly and professional same day courier, so just chat through your requirements and leave the rest to us. We organise the delivery and tell you when it’s arrived. Simple.
                 </p>
-                <h3>Call our team now on 01925 202 101</h3>
+                <h3>Call our team now on 01922610216</h3>
               </div>
             </div>
             <div className="clear-both"></div>

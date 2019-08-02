@@ -5,7 +5,8 @@
     width: 1300px;
     padding-left: 0px;
     padding-right: 0px;
-    
+    word-break: break-word;
+
     @include respond-to(xxs){
         width: 100%;
         max-width: 100%;
