@@ -30,12 +30,12 @@ class AddressContact extends Component {
                         </Map>
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 address-info">
-                        <h2 className="text-align-center" style={{ display: showTitle ? 'block' : 'none' }}>Where to find us?</h2>
+                        <h2 className={"text-align-center " + showTitle ? "" : "hide" }>Where to find us?</h2>
                         <p>
-                            Unit 19 New firms Centre<br />
-                            Fairground Way<br />
-                            Walsall<br />
-                            WS1 4NU<br />
+                            Unit 19 New firms Centre<br/>
+                            Fairground Way<br/>
+                            Walsall<br/>
+                            WS1 4NU<br/>
                             <h3>Contact Us:</h3>
                             info@wsdcourierservices.co.uk<br/>
                             01922610216<br/>

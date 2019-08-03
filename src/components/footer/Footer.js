@@ -5,6 +5,7 @@ import './Footer.scss';
 
 class Footer extends Component {
   render(){
+    const year = new Date().getFullYear();
     return (
       <footer>
         <div className="container">
@@ -42,6 +43,9 @@ class Footer extends Component {
               <small>
                 <Social/>
               </small>
+            </div>
+            <div className="col-12 text-align-center copy-right"> 
+              <b>Copyright&copy;{year} by wsdcourierservices.co.uk</b>
             </div>
           </div>
         </div>

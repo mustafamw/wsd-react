@@ -17,7 +17,7 @@ class Quotes extends Component {
 
         const quotesList = vanguide.map((e, index) => {
             return (
-                <Quote quote={e} index={index}></Quote>
+                <Quote quote={e} index={index} key={index}></Quote>
             );
         });
 

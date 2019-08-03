@@ -21,7 +21,7 @@ class Main extends Component{
     const serviceList = servicesList.map((data, index) => {
       const img = require(`../../assets/img/services-icon/${data.img}`);
       return (
-        <div className="col-xl-2 col-md-3 col-sm-6 col-xs-6 col-6 services-container">
+        <div className="col-xl-2 col-md-3 col-sm-6 col-xs-6 col-6 services-container" key={index}>
           <div className="service-img">
             <img src={img}/>
           </div>
@@ -34,7 +34,7 @@ class Main extends Component{
     const vanList = vansList.map((data, index) => {
       const img = require(`../../assets/img/vans/${data.img}`);
       return (
-        <div className="col-xl-4 col-6 van-list">
+        <div className="col-xl-4 col-6 van-list" key={index}>
           <Link to="/quotes/">
             <div className="van-container">
               <img src={img}/>

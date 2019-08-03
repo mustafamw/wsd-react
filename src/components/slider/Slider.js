@@ -28,14 +28,10 @@ class Slider extends Component {
     const carouselItems = slider.map((e, index)=>{
       const img = require(`../../assets/img/slider/${e.img}`);
       const divStyle = {
-        "background": `url(${img}) no-repeat center center fixed`,
-        "-webkit-background-size": "cover",
-        "-moz-background-size": "cover",
-        "-o-background-size": "cover",
-        "background-size": "cover"
+        "background": `url(${img}) no-repeat center center fixed`
       };
       return (
-        <Carousel.Item className="carousel-slider-item" style={divStyle} alt={e.title}>
+        <Carousel.Item className="carousel-slider-item" style={divStyle} alt={e.title} key={index}>
           <div className="container">
             <Carousel.Caption>
               <h1>{e.title}</h1>

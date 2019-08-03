@@ -8,17 +8,15 @@ import './Social.scss';
 class Social extends Component{
   render(){
     return (
-        <div id="shares" class="shares">
-            <div class="share">
+        <div id="shares" className="shares">
+            <div className="share">
                 <a href="https://www.facebook.com/WSD-Courier-Cargo-103429197673948/" target="_blank">
-                    <img src={facebook} alt="Facebook" srcset="" id="fb-share-button"/>
+                    <img src={facebook} alt="Facebook" id="fb-share-button"/>
                 </a>
             </div>
-            <div class="share"
-                tooltip 
-                tooltip-title="Instagram">
+            <div className="share">
                 <a href="https://www.instagram.com/Wsd_courier/" target="_blank">
-                    <img src={instagram} alt="Instagram" srcset=""/>
+                    <img src={instagram} alt="Instagram"/>
                 </a>
             </div>
         </div>
