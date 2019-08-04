@@ -1,6 +1,6 @@
 @import '../scss/global/global';
 
-$FOOTER-HEIGHT: 100px;
+$FOOTER-HEIGHT: 280px;
 
 html, body{
     height: 100%;
@@ -24,4 +24,9 @@ html, body{
 
 .wrap{
     min-height: calc(100% - #{$FOOTER-HEIGHT});
+}
+
+.wrap.plain{
+    background: white;
+    border-top: 1px solid #000000;
 }

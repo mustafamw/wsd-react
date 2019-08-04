@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.scss';
-import Routes from '../route/Route';
+import Nav from '../nav/Nav';
 import logo from '../../assets/img/logo/wsd-logo.png';
 import { BrowserRouter as Route, Link } from "react-router-dom";
 import burgerMenu  from '../../assets/img/icons/menu.png';
@@ -34,7 +34,7 @@ class Header extends Component {
             <div className="display-flex nav-container">
               <div className="col-12 padding-top-5px padding-bottom-5px">
                 <div className="nav-logo">
-                  <Link to="/">
+                  <Link to="/home">
                     <div className="logo">
                       <img src={logo}/>
                     </div>
@@ -48,7 +48,7 @@ class Header extends Component {
                   <img src={burgerMenu}/>
                 </div>
                 <div className="route" style={{ display: navShow ? 'block' : 'none' }}>
-                  <Routes style={{ display: navShow ? 'block' : 'none' }}/>
+                  <Nav style={{ display: navShow ? 'block' : 'none' }}/>
                 </div>
               </div>
             </div>

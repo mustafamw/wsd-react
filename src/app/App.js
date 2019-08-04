@@ -10,11 +10,33 @@ import QuotesForm from '../pages/quote-form/QuoteForm';
 import ContactUs from '../pages/contact-us/ContactUs';
 import TermsAndConditions from '../pages/terms-and-conditions/TermsAndConditions';
 import PrivacyPolicy from '../pages/privacy-policy/privacy-policy';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch, withRouter } from "react-router-dom";
 import ContactBanner from '../components/contact-banner/ContactBanner';
 import ScrollToTop from '../components/scroll-to-top/ScrollToTop';
+import NotFound from '../pages/404/404';
+import Routes from '../components/routes/Routes';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      plain: '',
+      path: ''
+    };
+    this.onRouteChanged = this.onRouteChanged.bind(this);
+  }
+
+  onRouteChanged(data) {
+    if(!data.key){
+      this.setState({plain: 'plain'});
+      this.setState({path: data.pathname});
+    }else{
+      this.setState({plain: ''});
+      this.setState({path: data.pathname});
+    }
+  }
+
   render(){
     return (
       <div className="App">
@@ -22,14 +44,8 @@ class App extends Component {
           <ScrollToTop>
             <ContactBanner/>
             <Header/>
-            <div className="wrap">
-              <Route path="/" exact component={Main} />
-              <Route path="/services/" exact component={Service} />
-              <Route path="/quotes/" exact component={Quotes} />
-              <Route path="/quotes/form" exact component={QuotesForm} />
-              <Route path="/contact-us" exact component={ContactUs}/>
-              <Route path="/terms-and-conditions" exact component={TermsAndConditions}/>
-              <Route path="/privacy-policy" exact component={PrivacyPolicy}/>
+            <div className={"wrap " + this.state.path + " "+ this.state.plain}>
+              <Routes onRouteChanged={this.onRouteChanged}/>
             </div>
             <Footer/>
             <Cookies/>

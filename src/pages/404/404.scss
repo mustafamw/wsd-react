@@ -1,0 +1,19 @@
+.not-found{
+    text-align: center;
+    .info{
+        padding-top: 90px;
+        h1{
+            font-size: 80px;
+        }
+        p{
+            font-size: 34px;
+        }
+    }
+    .img{
+
+    }
+    .info, .img{
+        color: #373940;
+        background: white;
+    }
+}

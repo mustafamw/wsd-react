@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Route, Link } from "react-router-dom";
 import facebook from '../../assets/img/social/Facebook.png';
-import twitter from '../../assets/img/social/Twitter.png';
 import instagram from '../../assets/img/social/Instagram.png';
 import './Social.scss';
 
