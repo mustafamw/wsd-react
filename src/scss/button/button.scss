@@ -1,9 +1,10 @@
-button{
+a.button, button{
     padding: 7px;
     display: block;
     width: 100%;
     border: none;
     margin-bottom: 10px;
+    text-align: center;
 
     &.blue{
         background: #0070c7;
@@ -16,4 +17,7 @@ button{
         color: white;
         font-weight: bold;
     }
+}
+a.button:hover, button:hover{
+    text-decoration: none;
 }

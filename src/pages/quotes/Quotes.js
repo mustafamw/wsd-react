@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Quote from '../../components/quote/Quote';
 import './Quotes.scss';
 import vanguide from '../../data/van-guide.json';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 class Quotes extends Component {
 
@@ -40,9 +41,11 @@ class Quotes extends Component {
                     </div>
                 </section>
                 <section>
-                    <div className="container quotes">
-                        Please note other vehicles are available upon request
-                        <button>Please contact one of our team</button>
+                    <div className="container quotes info">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 margin-center">
+                            <h3 className="text-align-center">Please note other vehicles are available upon request</h3>
+                            <Link to="/contact-us" className="blue button">Please contact one of our team</Link>
+                        </div>
                     </div>
                 </section>
             </article>

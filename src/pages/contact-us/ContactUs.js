@@ -73,17 +73,19 @@ class ContactUs extends Component {
     handleValidateAllField(data){
         let fieldsValid = true;
         Object.keys(this.state).forEach((item) => {
-            const value = data.get(item);
-            const valid = this.state[item].valid;
-            if(!valid || valid === false){
-                fieldsValid = false;
-            }
-            this.handleBlur({
-                target: {
-                    name: item,
-                    value: value
+            if(item !== 'sent'){
+                const value = data.get(item);
+                const valid = this.state[item].valid;
+                if(!valid || valid === false){
+                    fieldsValid = false;
                 }
-            });
+                this.handleBlur({
+                    target: {
+                        name: item,
+                        value: value
+                    }
+                });
+            }
         });
         return fieldsValid;
     }
@@ -114,7 +116,7 @@ class ContactUs extends Component {
                         </div>
                         <div className="display-flex">
                             <div className="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-12 no-padding-left no-padding-right">
-                                {!this.state.sent ?
+                                {this.state.sent === false ?
                                 <div className="col-xl-12 col-12 margin-center">
                                     <p>
                                         If you have an enquiry please do contact us, we will get back to you as soon as possible.
@@ -162,7 +164,7 @@ class ContactUs extends Component {
                                         </div>
                                     </form>
                                 </div> : null }
-                                {this.state.sent ?
+                                {this.state.sent === true ?
                                 <div className="col-xl-12 col-12 margin-center text-align-center">
                                     <img src={checked} alt="Checked" className="checked"/>
                                     <h2>Thank you, your enquiry has been sent, we will get back to you.</h2>
