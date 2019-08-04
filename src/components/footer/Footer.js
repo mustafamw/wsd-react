@@ -33,6 +33,8 @@ class Footer extends Component {
               <h4>QUICK LINKS</h4>
               <div className="clear-both"></div>
               <small>
+                <Link to="/quotes/form">Get a Quote</Link><br/>
+                <Link to="/contact-us">Contact Us</Link><br/>
                 <Link to="/terms-and-conditions">Terms and Conditions</Link><br/>
                 <Link to="/privacy-policy">Privacy Policy</Link>
               </small>

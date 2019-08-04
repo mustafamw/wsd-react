@@ -23,6 +23,9 @@
                     padding: 10px;
                     font-weight: bold;
                 }
+                a.active{
+                    background: red;
+                }
                 a:hover{
                     text-decoration: none;
                     color: white;

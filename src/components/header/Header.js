@@ -4,6 +4,7 @@ import Routes from '../route/Route';
 import logo from '../../assets/img/logo/wsd-logo.png';
 import { BrowserRouter as Route, Link } from "react-router-dom";
 import burgerMenu  from '../../assets/img/icons/menu.png';
+import { withRouter } from 'react-router-dom';
 
 class Header extends Component {
 
@@ -11,6 +12,13 @@ class Header extends Component {
     super(props);
     this.state = {show: false};
   }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.setState({show:false});
+    }
+  }
+
 
   render(){
 
@@ -50,5 +58,4 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;
+export default withRouter(Header);
