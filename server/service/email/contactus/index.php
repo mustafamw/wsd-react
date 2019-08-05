@@ -13,7 +13,7 @@
 
         function contactSubmit($contactUsDetail){
 
-            global $API_ENDPOINT_FRONTEND, $EMAIL_TITLE, $HEAD, $HEADER, $FOOTER, $SUPPORT_EMAIL;
+            global $API_ENDPOINT_FRONTEND, $EMAIL_TITLE, $HEAD, $HEADER, $FOOTER, $SUPPORT_EMAIL, $NO_REPLY_EMAIL;
 
             $email = $contactUsDetail -> email;
             $subject = $contactUsDetail -> subject;
@@ -42,7 +42,7 @@
             $headers[] = "MIME-Version: 1.0";
             $headers[] = "Content-type: text/html; charset=iso-8859-1";
             $headers[] = "To: <{$email}>";
-            $headers[] = "From: {$EMAIL_TITLE} Enquiry <{$SUPPORT_EMAIL}>";
+            $headers[] = "From: {$EMAIL_TITLE} Enquiry <{$NO_REPLY_EMAIL}>";
 
             mail('', $subject, $message, implode("\r\n", $headers));
         }
