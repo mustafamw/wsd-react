@@ -1,5 +1,4 @@
 <?php
-    $JWTKey = "";
     $API_ENDPOINT = 'http://wsdcourierservices.co.uk/api';
     $API_ENDPOINT_FRONTEND = 'http://wsdcourierservices.co.uk';
     $EMAIL_TITLE = "Wsdcourierservices";
