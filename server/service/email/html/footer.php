@@ -26,7 +26,7 @@
                 <h4>QUICK LINKS</h4>
                 <div class=\"clear-both\"></div>
                 <small>
-                    <a href=\"{$API_ENDPOINT_FRONTEND}/quotes/form\">Get a Quote</a>
+                    <a href=\"{$API_ENDPOINT_FRONTEND}/quotes/form\">Get a Quote</a><br/>
                     <a href=\"{$API_ENDPOINT_FRONTEND}/contact-us\">Contact Us</a><br/>
                     <a href=\"{$API_ENDPOINT_FRONTEND}/terms-and-conditions\">Terms and Conditions</a><br/>
                     <a href=\"{$API_ENDPOINT_FRONTEND}/privacy-policy\">Privacy Policy</a>
