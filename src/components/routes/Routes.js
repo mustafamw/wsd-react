@@ -8,24 +8,38 @@ import TermsAndConditions from '../../pages/terms-and-conditions/TermsAndConditi
 import PrivacyPolicy from '../../pages/privacy-policy/privacy-policy';
 import { BrowserRouter as Router, Route, Redirect, Switch, withRouter } from "react-router-dom";
 import NotFound from '../../pages/404/404';
+import { PathUrl } from '../../constant/path-url/PathUrl';
 
 class Routes extends Component {
 
     constructor(props) {
         super(props);
-        this.onRouteChanged(this.props.location);
+        this.props.onRouteChanged(this.isPathMatch());
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.location !== prevProps.location) {
-            this.onRouteChanged(this.props.location);
+            this.onRouteChanged();
         }
     }
 
-    onRouteChanged(location) {
-        this.props.onRouteChanged(location);
+    isPathMatch(){
+        let match = false;
+        const path = this.props.location.pathname.replace(/\//g, '').toLocaleLowerCase();
+        if(PathUrl.indexOf(path) !== -1){
+            match = true;
+        }else{
+            match = false;
+        }
+        return {
+            match: match,
+            path: path
+        };
     }
 
+    onRouteChanged() {
+        this.props.onRouteChanged(this.isPathMatch());
+    }
 
     render() {
         return (
@@ -38,7 +52,7 @@ class Routes extends Component {
                 <Route path="/contact-us" exact={true} component={ContactUs} />
                 <Route path="/terms-and-conditions" exact={true} component={TermsAndConditions} />
                 <Route path="/privacy-policy" exact={true} component={PrivacyPolicy} />
-                <Route component={NotFound} exact={false} name="fdgdf" path="*" />
+                <Route component={NotFound} exact={false} path="*"/>
             </Switch>
         );
     }

@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   onRouteChanged(data) {
-    if(!data.key){
+    if(!data.match){
       this.setState({plain: 'plain'});
       this.setState({path: data.pathname});
     }else{
