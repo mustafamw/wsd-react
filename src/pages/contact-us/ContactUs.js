@@ -3,7 +3,7 @@ import { BrowserRouter as Route, Link } from "react-router-dom";
 import AddressContact from '../../components/address-contact/AddressContact';
 import ValidationService from '../../utils/validation/Validation';
 import ContactUsService from '../../services/contact-us/ContactUs';
-import checked from '../../assets/img/icons/checked.png';
+import sent from '../../assets/img/icons/sent.png';
 import './ContactUs.scss';
 
 class ContactUs extends Component {
@@ -165,8 +165,8 @@ class ContactUs extends Component {
                                     </form>
                                 </div> : null }
                                 {this.state.sent === true ?
-                                <div className="col-xl-12 col-12 margin-center text-align-center">
-                                    <img src={checked} alt="Checked" className="checked"/>
+                                <div className="col-xl-12 col-12 margin-center text-align-center enquiry">
+                                    <img src={sent} alt="Checked" className="checked"/>
                                     <h2>Thank you, your enquiry has been sent, we will get back to you.</h2>
                                     <button className="blue" onClick={this.handleBack}>Back to Enquiry</button>
                                 </div> : null }

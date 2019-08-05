@@ -31,7 +31,14 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    .checked{
-        width: 200px;
+    .enquiry{
+        .checked{
+            width: 50%;
+            margin-top: 26px;
+        }
+        h2{
+            margin-top: 20px;
+            margin-bottom: 20px
+        }
     }
 }
