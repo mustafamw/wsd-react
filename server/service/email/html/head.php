@@ -19,15 +19,25 @@
                     box-sizing: border-box;
                 }
                 .body_container{
-                    background: #003a67;
+                    background: white;
                     width: 50%;
                     margin: auto;
                     min-height: 300px;
                     padding: 15px;
-                    padding-top: 50px;
+                    padding-top: 15px;
                     box-sizing: border-box;
-                    color: white;
+                    color: black;
                     border-top: none !important;
+                    font-size: 16px;
+                    color: #040d29;
+                }
+                a{
+                    color: #040d29 !important;
+                    text-decoration: underline !important;
+                }
+                a:hover{
+                    color: #040d29 !important;
+                    text-decoration: none !important;
                 }
                 .header{
                     background: white;
@@ -63,6 +73,14 @@
                     margin: auto;
                     border: 1px solid #040f29;
                 }
+                .footer a{
+                    color: white !important;
+                    text-decoration: underline !important;
+                }
+                .footer a:hover{
+                    color: white !important;
+                    text-decoration: none !important;
+                }
                 .footer .container{
                     width: 25%;
                     float: left;
@@ -82,15 +100,13 @@
                 p.more_information{
                     font-size: 12px;
                 }
-                table{
-                    border-spacing: 0px;
+                p a{
+                    color: black !important;
+                    text-decoration: underline !important;
                 }
-                a{
-                    color: white !important;
-                    text-decoration: underline;
-                }
-                a:hover{
-                    text-decoration: none;
+                p a:hover{
+                    color: black;
+                    text-decoration: none !important;
                 }
                 a.activate{
                     color: white;
@@ -119,6 +135,33 @@
                 }
                 .shares img{
                     width: 35px;
+                }
+                .zui-table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    font: normal 13px Arial, sans-serif;
+                    margin: auto;
+                    background: white;
+                    width: 80%;
+                    box-shadow: 0px 0px 5px black;
+                }
+                .zui-table thead th {
+                    background-color: #040e29;
+                    border: solid 1px #040e29;
+                    color: white;
+                    padding: 10px;
+                    text-align: left;
+                }
+                .zui-table tbody td {
+                    border: solid 1px #040d29;
+                    padding: 10px;
+                    text-shadow: 1px 1px 1px #fff;
+                }
+                .zui-table tbody td a {
+                    text-decoration: underline;
+                }
+                .zui-table tbody td a:hover {
+                    text-decoration: none;
                 }
             </style>
         </head>
