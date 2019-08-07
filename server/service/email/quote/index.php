@@ -20,7 +20,7 @@
             $contactNo = $quoteDetails -> contactNo;
             $pickupFrom = $quoteDetails -> pickupFrom;
             $pickupTo = $quoteDetails -> pickupTo;
-            $pickupDatetime = date("Y-m-d h:i A", strtotime($quoteDetails -> pickupDatetime));
+            $pickupDatetime = date("d/m/Y h:iA", strtotime($quoteDetails -> pickupDatetime));
             $vehicleType = $quoteDetails -> vehicleType;
 
             $to = "{$email}";
@@ -114,7 +114,7 @@
             $contactNo = $quoteDetails -> contactNo;
             $pickupFrom = $quoteDetails -> pickupFrom;
             $pickupTo = $quoteDetails -> pickupTo;
-            $pickupDatetime = date("Y-m-d h:i A", strtotime($quoteDetails -> pickupDatetime));
+            $pickupDatetime = date("d/m/Y h:iA", strtotime($quoteDetails -> pickupDatetime));
             $vehicleType = $quoteDetails -> vehicleType;
 
             $to = "{$EMAIL_ADMIN}";

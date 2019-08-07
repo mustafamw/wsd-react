@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import vansListData from '../../data/van-guide.json';
-import { BrowserRouter as Route, Link } from "react-router-dom";
+import arrowUp from '../../assets/img/icons/arrow-up.png';
+import arrowDown from '../../assets/img/icons/arrow-down.png';
 import './VehicleType.scss';
 
 class VehicleType extends Component {
@@ -16,18 +17,21 @@ class VehicleType extends Component {
         if(index && vansListData[index]){
             this.state.vanSelected = [vansListData[index]];
         }
+        this.onVehicleChange(this.state.vanSelected)
     }
 
     clicked(data, boolean, index) {
-        this.setState({vanSelected:[data]});
         this.setState({showPopup:boolean});
+        this.setState({vanSelected:[data]}, () => {
+            this.onVehicleChange(this.state.vanSelected);
+        });
     }
     
     renderType(e, boolean, index){
         const img = require(`../../assets/img/vans/${e.img}`);
         return (
-            <li value={e} onClick={() => this.clicked(e, boolean, index)} key={index}>
-                <div className="col-12">
+            <li value={e} onMouseDown={() => this.clicked(e, boolean, index)} key={index}>
+                <div className="col-12 no-padding-left no-padding-right">
                     <div className="display-flex">
                         <div className="col-2 image">
                             <img src={img}/>
@@ -41,9 +45,13 @@ class VehicleType extends Component {
         );
     }
 
+    onVehicleChange(data) {
+        this.props.onVehicleChange(data);
+    }
+
     render() {
 
-        let showPopup = this.state.showPopup;
+        const showPopup = this.state.showPopup;
 
         const van = this.state.vanSelected.map((e, index) => {
             return this.renderType(e, true, index);
@@ -63,6 +71,9 @@ class VehicleType extends Component {
                     <ul className="non-popup">
                         {van}
                     </ul>
+                    <img src={showPopup ? arrowUp : arrowDown} 
+                         alt={"arrow " + showPopup ? "up" : "down" } 
+                         className={"arrow " + (showPopup ? "up" : "down") }/>
                 </ul>
             </div>
         );

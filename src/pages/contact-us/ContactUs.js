@@ -136,7 +136,8 @@ class ContactUs extends Component {
                                         <div className="form-group">
                                             <input type="text" 
                                                    className={"form-control " + (this.state.subject.valid === false && this.state.subject.focus === false  ? "input-error" : null)}
-                                                   id="subject" name="subject" 
+                                                   id="subject" 
+                                                   name="subject" 
                                                    onBlur={this.handleBlur} 
                                                    onFocus={this.handleFocus} 
                                                    placeholder="Subject..."
@@ -166,7 +167,7 @@ class ContactUs extends Component {
                                 </div> : null }
                                 {this.state.sent === true ?
                                 <div className="col-xl-12 col-12 margin-center text-align-center enquiry">
-                                    <img src={sent} alt="Checked" className="checked"/>
+                                    <img src={sent} alt="Sent" className="sent"/>
                                     <h2>Thank you, your enquiry has been sent, we will get back to you.</h2>
                                     <button className="blue" onClick={this.handleBack}>Back to Enquiry</button>
                                 </div> : null }
