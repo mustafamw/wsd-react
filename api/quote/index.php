@@ -1,7 +1,6 @@
 <?php
 
     header('Content-type: application/json');
-    header("Access-Control-Allow-Origin: *");
 
     require(dirname(__FILE__) . '/../../server/utils/https/status/index.php');
     require(dirname(__FILE__) . '/../../server/database/insert/quote.php');
