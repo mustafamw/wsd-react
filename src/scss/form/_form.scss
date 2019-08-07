@@ -38,7 +38,9 @@ form{
             margin-bottom: 5px !important;
         }
         input{
-            padding: 20px;
+            @include respond-to(xxs){
+                padding: 20px;
+            }
         }
     }
     .form-group:last-child{
