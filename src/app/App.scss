@@ -16,6 +16,12 @@ html, body{
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Oxygen', sans-serif !important;
+    @include respond-to(xs){
+        font-size: 16px !important;
+    }
+    @include respond-to(xxs){
+        font-size: 16px !important;
+    }
 }
 
 #root, .App{

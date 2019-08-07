@@ -25,8 +25,8 @@
         $email = $_POST["email"];
         $fullname = $_POST["fullname"];
         $contactNo = $_POST["contactNo"];
-        $pickupFrom = $_POST["pickupFrom"];
-        $pickupTo = $_POST["pickupTo"];
+        $pickupFrom = strtoupper($_POST["pickupFrom"]);
+        $pickupTo = strtoupper($_POST["pickupTo"]);
         $pickupDatetime = $_POST["pickupDatetime"];
         $vehicleType = $_POST["vehicleType"];
 

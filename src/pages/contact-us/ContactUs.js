@@ -33,6 +33,7 @@ class ContactUs extends Component {
         this.handleBlur = this.handleBlur.bind(this);
         this.handleFocus = this.handleFocus.bind(this);
         this.handleBack = this.handleBack.bind(this);
+        this.clearFields = this.clearFields.bind(this);
     }
 
     handleBlur(event){
@@ -90,6 +91,21 @@ class ContactUs extends Component {
         return fieldsValid;
     }
 
+    clearFields(){
+        Object.keys(this.state).forEach((item) => {
+            if(item !== 'sent'){
+                this.setState({
+                    [item]: {
+                        valid: undefined,
+                        focus: false,
+                        min: this.state[item].min,
+                        max: this.state[item].max
+                    }
+                });
+            }
+        });
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         const data = new FormData(event.target);
@@ -98,6 +114,7 @@ class ContactUs extends Component {
             ContactUsService.contactus(data)
             .then((data) => {
                 this.setState({sent: true});
+                this.clearFields();
             });
         }
     }
@@ -166,8 +183,8 @@ class ContactUs extends Component {
                                     </form>
                                 </div> : null }
                                 {this.state.sent === true ?
-                                <div className="col-xl-12 col-12 margin-center text-align-center enquiry">
-                                    <img src={sent} alt="Sent" className="sent"/>
+                                <div className="col-xl-12 col-12 margin-center text-align-center sent">
+                                    <img src={sent} alt="Sent"/>
                                     <h2>Thank you, your enquiry has been sent, we will get back to you.</h2>
                                     <button className="blue" onClick={this.handleBack}>Back to Enquiry</button>
                                 </div> : null }

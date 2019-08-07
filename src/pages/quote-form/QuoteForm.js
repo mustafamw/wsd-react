@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
-import addDays from "date-fns/addDays";
+import addYears from "date-fns/addYears";
 import subDays from "date-fns/subDays";
 import VehicleType from '../../components/vehicle-type/VehicleType';
 import QuoteService from '../../services/quote/Quote';
@@ -29,6 +29,7 @@ class QuoteForm extends Component {
             contactNo: {
                 valid: undefined,
                 focus: false,
+                value:'',
                 min: 5,
                 max: 20
             },
@@ -54,12 +55,14 @@ class QuoteForm extends Component {
             },
             sent: false
         };
+        this.onChange = this.onChange.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
         this.handleFocus = this.handleFocus.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.onVehicleChange = this.onVehicleChange.bind(this);
+        this.clearFields = this.clearFields.bind(this);
     }
 
     handleBlur(event){
@@ -102,6 +105,10 @@ class QuoteForm extends Component {
         let valid;
         if(field === 'email'){
             valid = ValidationService.email(value);
+        }else if(field === 'contactNo'){
+            valid = ValidationService.validateNumber(value);
+        }else if(field === 'pickupFrom' || field === 'pickupTo'){
+            valid = ValidationService.validatePostcode(value);
         }else{
             valid = ValidationService.string(value, this.state[field].min, this.state[field].max);
         }
@@ -128,6 +135,23 @@ class QuoteForm extends Component {
         return fieldsValid;
     }
 
+    clearFields(){
+        Object.keys(this.state).forEach((item) => {
+            if(item !== 'vehicleType' && item !== 'sent' && item !== 'pickupDatetime'){
+                this.setState({
+                    [item]: {
+                        valid: undefined,
+                        focus: false,
+                        min: this.state[item].min,
+                        max: this.state[item].max,
+                        date: this.state[item].date,
+                        value: ''
+                    }
+                });
+            }
+        });
+    }
+
 
     handleSubmit(event) {
         event.preventDefault();
@@ -137,9 +161,12 @@ class QuoteForm extends Component {
             QuoteService.quote(data)
             .then((data) => {
                 this.setState({sent: true});
+                this.clearFields();
             });
         }
     }
+
+
 
     handleBack() {
         this.setState({sent: false});
@@ -150,6 +177,22 @@ class QuoteForm extends Component {
             vehicleType: {
                 value: vehicle[0].title,
                 valid: true
+            }
+        })
+    }
+
+    onChange(e){
+        let value = e.target.value
+      
+        value = value.replace(/[^0-9\-()+.]/ig, '')
+      
+        this.setState({
+            contactNo: {
+                valid: this.state.contactNo.valid,
+                focus: this.state.contactNo.focus,
+                value: value,
+                min: this.state.contactNo.min,
+                max: this.state.contactNo.max
             }
         })
     }
@@ -171,7 +214,9 @@ class QuoteForm extends Component {
                                         <div className="form-group">
                                             <div className="display-flex">
                                                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                                    Email Address:
+                                                    <label>
+                                                        Email Address:<small>*</small>
+                                                    </label>
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <input type="email" 
@@ -182,14 +227,16 @@ class QuoteForm extends Component {
                                                         onFocus={this.handleFocus} 
                                                         placeholder="Email..."
                                                         maxlength={this.state.email.max} />
-                                                    {this.state.email.valid === false && this.state.email.focus === false  ? <div className="input-error-text">Please enter a valid Email address</div> : null}
+                                                    {this.state.email.valid === false && this.state.email.focus === false  ? <div className="input-error-text">Please enter valid Email address</div> : null}
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="form-group">
                                             <div className="display-flex">
                                                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                                    Full Name:
+                                                    <label>
+                                                        Full Name:<small>*</small>
+                                                    </label>
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <input type="text" 
@@ -208,10 +255,13 @@ class QuoteForm extends Component {
                                         <div className="form-group">
                                             <div className="display-flex">
                                                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                                    Contact Number:
+                                                    <label>
+                                                        Contact Number:<small>*</small>
+                                                    </label>
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <input type="text" 
+                                                        onChange={this.onChange}
                                                         className={"form-control " + (this.state.contactNo.valid === false && this.state.contactNo.focus === false  ? "input-error" : null)}  
                                                         id="contactNo"
                                                         name="contactNo" 
@@ -219,19 +269,22 @@ class QuoteForm extends Component {
                                                         onFocus={this.handleFocus}
                                                         minLength={this.state.contactNo.min}
                                                         maxlength={this.state.contactNo.max} 
+                                                        value={this.state.contactNo.value}
                                                         placeholder="Contact No..." />
-                                                    {this.state.contactNo.valid === false && this.state.contactNo.focus === false  ? <div className="input-error-text">Please enter a valid Contact No</div> : null}
+                                                    {this.state.contactNo.valid === false && this.state.contactNo.focus === false  ? <div className="input-error-text">Please enter valid Contact Number</div> : null}
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="form-group">
                                             <div className="display-flex">
                                                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                                    <label>Pick Up From:</label>
+                                                    <label>
+                                                        Pick Up From:<small>*</small>
+                                                    </label>
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <input type="text" 
-                                                        className={"form-control " + (this.state.pickupFrom.valid === false && this.state.pickupFrom.focus === false  ? "input-error" : null)}  
+                                                        className={"form-control text-uppercase " + (this.state.pickupFrom.valid === false && this.state.pickupFrom.focus === false  ? "input-error" : null)}  
                                                         id="pickupFrom" 
                                                         name="pickupFrom"
                                                         onBlur={this.handleBlur} 
@@ -239,18 +292,20 @@ class QuoteForm extends Component {
                                                         minLength={this.state.pickupFrom.min}
                                                         maxlength={this.state.pickupFrom.max} 
                                                         placeholder="Post Code..." />
-                                                    {this.state.pickupFrom.valid === false && this.state.pickupFrom.focus === false  ? <div className="input-error-text">Please enter a valid Post Code</div> : null}
+                                                    {this.state.pickupFrom.valid === false && this.state.pickupFrom.focus === false  ? <div className="input-error-text">Please enter valid Post Code</div> : null}
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="form-group">
                                             <div className="display-flex">
                                                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                                    <label>Pick Up To:</label>
+                                                    <label>
+                                                        Pick Up To:<small>*</small>
+                                                    </label>
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <input type="text" 
-                                                        className={"form-control " + (this.state.pickupTo.valid === false && this.state.pickupTo.focus === false  ? "input-error" : null)}  
+                                                        className={"form-control text-uppercase " + (this.state.pickupTo.valid === false && this.state.pickupTo.focus === false  ? "input-error" : null)}  
                                                         id="pickupTo" 
                                                         name="pickupTo"
                                                         onBlur={this.handleBlur} 
@@ -258,27 +313,30 @@ class QuoteForm extends Component {
                                                         minLength={this.state.pickupTo.min}
                                                         maxlength={this.state.pickupTo.max} 
                                                         placeholder="Post Code..." />
-                                                    {this.state.pickupTo.valid === false && this.state.pickupTo.focus === false  ? <div className="input-error-text">Please enter a valid Post Code</div> : null}
+                                                    {this.state.pickupTo.valid === false && this.state.pickupTo.focus === false  ? <div className="input-error-text">Please enter valid Post Code</div> : null}
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="form-group">
                                             <div className="display-flex">
                                                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                                    <label>Date & Time:</label>
+                                                    <label>
+                                                        Date & Time:<small>*</small>
+                                                    </label>
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <DatePicker
                                                         selected={this.state.pickupDatetime.date}
                                                         onChange={this.handleChange}
                                                         minDate={subDays(new Date(), 0)}
+                                                        maxDate={addYears(new Date(), 2)}
                                                         showTimeSelect
                                                         timeFormat="HH:mm"
                                                         timeIntervals={30}
                                                         dateFormat="MMMM d, yyyy h:mm aa"
                                                         timeCaption="time"
                                                     />
-                                                    <input type="text"
+                                                    <input type="hidden"
                                                         id="pickupDatetime"
                                                         name="pickupDatetime"
                                                         value={moment(this.state.pickupDatetime.date).format('YYYY-MM-DDTHH:mm')}/>
@@ -288,7 +346,9 @@ class QuoteForm extends Component {
                                         <div className="form-group">
                                             <div className="display-flex">
                                                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                                    Vehicle Type
+                                                    <label>
+                                                        Vehicle Type:<small>*</small>
+                                                    </label>
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <VehicleType onVehicleChange={this.onVehicleChange}/>

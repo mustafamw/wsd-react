@@ -1,4 +1,4 @@
-@import '../variables/variables';
+@import '../responsive/responsive';
 
 .clear-both{
     clear: both;
@@ -54,6 +54,48 @@ h6{
     font-size: 0.4em;
 }
 
+
+@include respond-to(xxs){
+    h1{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    h4{
+        font-size: 0.7em;
+    }
+    h5{
+        font-size: 0.5em;
+    }
+    h6{
+        font-size: 0.4em;
+    }
+}
+@include respond-to(xs){
+    h1{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    h4{
+        font-size: 0.7em;
+    }
+    h5{
+        font-size: 0.5em;
+    }
+    h6{
+        font-size: 0.4em;
+    }
+}
+
 .padding-top-5px{
     padding-top: 5px;
 }
@@ -84,4 +126,11 @@ h6{
 
 .no-padding-left{
     padding-left: 0px;
+}
+
+.text-uppercase{
+    text-transform: capitalize;
+}
+::placeholder{
+    text-transform: none !important;
 }

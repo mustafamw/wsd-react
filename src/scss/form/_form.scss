@@ -12,6 +12,12 @@ form{
         padding: 5px;
         padding-left: 15px;
         padding-right: 15px;
+        @include respond-to(xs){
+            font-size: 12px;
+        }
+        @include respond-to(xxs){
+            font-size: 12px;
+        }
     }
     
     textarea{
