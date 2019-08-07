@@ -17,12 +17,10 @@
             $quoteObj = new stdClass();
             $quoteEmail = new QuoteEmail();
 
-            $pickupDatetime = strtotime($pickupDatetime);
-            $pickupDatetimeMysql = date("Y-m-d H:i:s", strtotime($pickupDatetime));
-
+            $pickupDatetimeMySql = date('Y-m-d\TH:i:s', strtotime($pickupDatetime));
 
             $sql = "INSERT INTO quote (email, fullname, contactNo, pickupFrom, pickupTo, pickupDatetime, vehicleType)
-                    VALUES ('$email', '$fullname', '$contactNo', '$pickupFrom', '$pickupTo', '$pickupDatetimeMysql', '$vehicleType');";
+                    VALUES ('$email', '$fullname', '$contactNo', '$pickupFrom', '$pickupTo', '$pickupDatetimeMySql', '$vehicleType');";
 
             if ($conn->query($sql) === TRUE) {
 

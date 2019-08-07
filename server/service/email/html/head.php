@@ -29,7 +29,6 @@
                     color: black;
                     border-top: none !important;
                     font-size: 16px;
-                    color: #040d29;
                 }
                 a{
                     color: #040d29 !important;
@@ -57,6 +56,8 @@
                     padding: 15px;
                     box-sizing: border-box;
                     font-size: 12px;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
                 }
                 .footer h4{
                     border-bottom: 1px solid #1ac5ff;
@@ -92,6 +93,7 @@
                     clear: both;
                     text-align: center;
                     font-size: 10px;
+                    margin-top: 5px;
                 }
                 hr{
                     border: 1px solid #f5f5f5;

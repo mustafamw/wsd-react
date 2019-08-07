@@ -48,6 +48,7 @@
                     </div>
                 </div>
             </div>
+            <div class=\"clear-both\"></div>
             <div class=\"copy_right\">
                 <b>Copyright&copy;$YEAR by wsdcourierservices.co.uk</b>
             </div>
