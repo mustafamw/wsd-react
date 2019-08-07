@@ -33,7 +33,7 @@
                         {$HEADER}
                         <div class=\"body_container\">
                             <h2>Hello {$fullname}</h2>
-                            <p>Thank you for selecting {$vehicleType} Quote, we will response to you as soon as possible.</p>
+                            <p>Thank you for selecting {$vehicleType} Quote, we will respond to you as soon as possible.</p>
                             <table class=\"zui-table\">
                                 <thead>
                                     <tr>

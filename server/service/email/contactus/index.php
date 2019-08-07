@@ -29,7 +29,7 @@
                         {$HEADER}
                         <div class=\"body_container\">
                             <h2>Hello</h2>
-                            <p>Thank you for contacting us, we will response to you as soon as possible.</p>
+                            <p>Thank you for contacting us, we will respond to you as soon as possible.</p>
                             <hr/>
                             <p class=\"more_information\">Please do not reply to this email, this email address is not monitored. Please use our <a href=\"{$API_ENDPOINT_FRONTEND}/contact-us\">contact page</a>.</p>
                         </div>
