@@ -3,6 +3,7 @@ import { BrowserRouter as Route, Link } from "react-router-dom";
 import AddressContact from '../../components/address-contact/AddressContact';
 import ValidationService from '../../utils/validation/Validation';
 import ContactUsService from '../../services/contact-us/ContactUs';
+import TechnicalError from '../../components/technical-error/TechnicalError';
 import sent from '../../assets/img/icons/sent.png';
 import './ContactUs.scss';
 
@@ -27,7 +28,8 @@ class ContactUs extends Component {
                 min: 5,
                 max: 300
             },
-            sent: false
+            sent: false,
+            error: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
@@ -74,7 +76,7 @@ class ContactUs extends Component {
     handleValidateAllField(data){
         let fieldsValid = true;
         Object.keys(this.state).forEach((item) => {
-            if(item !== 'sent'){
+            if(item !== 'sent' && item !== 'error'){
                 const value = data.get(item);
                 const valid = this.state[item].valid;
                 if(!valid || valid === false){
@@ -93,7 +95,7 @@ class ContactUs extends Component {
 
     clearFields(){
         Object.keys(this.state).forEach((item) => {
-            if(item !== 'sent'){
+            if(item !== 'sent' && item !== 'error'){
                 this.setState({
                     [item]: {
                         valid: undefined,
@@ -110,12 +112,19 @@ class ContactUs extends Component {
         event.preventDefault();
         const data = new FormData(event.target);
         const valid =  this.handleValidateAllField(data);
+        this.setState({error: false});
         if(valid){
             ContactUsService.contactus(data)
             .then((data) => {
                 this.setState({sent: true});
+                this.setState({error: false});
                 this.clearFields();
-            });
+            })
+            .catch((error) => {
+                this.setState({error: true});
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            })
         }
     }
 
@@ -138,6 +147,7 @@ class ContactUs extends Component {
                                     <p>
                                         If you have an enquiry please do contact us, we will get back to you as soon as possible.
                                     </p>
+                                    {this.state.error === true ? <TechnicalError/> : null}
                                     <form onSubmit={this.handleSubmit}>
                                         <div className="form-group">
                                             <input type="email" 

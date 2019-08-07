@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import addYears from "date-fns/addYears";
 import subDays from "date-fns/subDays";
 import VehicleType from '../../components/vehicle-type/VehicleType';
+import TechnicalError from '../../components/technical-error/TechnicalError';
 import QuoteService from '../../services/quote/Quote';
 import ValidationService from '../../utils/validation/Validation';
 import sent from '../../assets/img/icons/sent.png';
@@ -53,7 +54,8 @@ class QuoteForm extends Component {
                 valid: true,
                 value: ''
             },
-            sent: false
+            sent: false,
+            error: false
         };
         this.onChange = this.onChange.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -118,7 +120,7 @@ class QuoteForm extends Component {
     handleValidateAllField(data){
         let fieldsValid = true;
         Object.keys(this.state).forEach((item) => {
-            if(item !== 'sent'){
+            if(item !== 'sent' && item !== 'error'){
                 const value = data.get(item);
                 const valid = this.state[item].valid;
                 if(!valid || valid === false){
@@ -137,7 +139,7 @@ class QuoteForm extends Component {
 
     clearFields(){
         Object.keys(this.state).forEach((item) => {
-            if(item !== 'vehicleType' && item !== 'sent' && item !== 'pickupDatetime'){
+            if(item !== 'vehicleType' && item !== 'sent' && item !== 'error' && item !== 'pickupDatetime'){
                 this.setState({
                     [item]: {
                         valid: undefined,
@@ -157,12 +159,19 @@ class QuoteForm extends Component {
         event.preventDefault();
         const data = new FormData(event.target);
         const valid =  this.handleValidateAllField(data);
+        this.setState({error: false});
         if(valid){
             QuoteService.quote(data)
             .then((data) => {
+                this.setState({error: false});
                 this.setState({sent: true});
                 this.clearFields();
-            });
+            })
+            .catch((error) => {
+                this.setState({error: true});
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            })
         }
     }
 
@@ -208,7 +217,9 @@ class QuoteForm extends Component {
                                     <h1>Get a Quote</h1>
                                     {this.state.sent === false ? <p>Same day pallet delivery prices start from £35</p> : null }
                                 </div>
+
                                 <div className="col-xl-8 row col-12 margin-center no-padding-left no-padding-right">
+                                    {this.state.error === true ? <div className="col-12"><TechnicalError/></div> : null}
                                     {this.state.sent === false ? 
                                     <form onSubmit={this.handleSubmit}>
                                         <div className="form-group">

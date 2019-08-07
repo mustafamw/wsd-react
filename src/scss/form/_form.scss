@@ -26,6 +26,26 @@ form{
         height: 175px;
         display: table;
     }
+
+    label{
+        @include respond-to(xxs){
+            margin-bottom: 0px !important;
+        }
+    }
+
+    .form-group{
+        @include respond-to(xxs){
+            margin-bottom: 5px !important;
+        }
+        input{
+            padding: 20px;
+        }
+    }
+    .form-group:last-child{
+        @include respond-to(xxs){
+            margin-top: 5px !important;
+        }
+    }
 }
 
 .sent{
