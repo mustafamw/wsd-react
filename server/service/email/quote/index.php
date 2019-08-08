@@ -22,6 +22,7 @@
             $pickupTo = $quoteDetails -> pickupTo;
             $pickupDatetime = date("d/m/Y h:iA", strtotime($quoteDetails -> pickupDatetime));
             $vehicleType = $quoteDetails -> vehicleType;
+            $description = $quoteDetails -> description;
 
             $to = "{$email}";
             $subject = "{$EMAIL_TITLE} Quote";
@@ -86,6 +87,14 @@
                                             {$vehicleType}
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            Description:
+                                        </td>
+                                        <td>
+                                            {$description}
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                             <hr/>
@@ -116,6 +125,7 @@
             $pickupTo = $quoteDetails -> pickupTo;
             $pickupDatetime = date("d/m/Y h:iA", strtotime($quoteDetails -> pickupDatetime));
             $vehicleType = $quoteDetails -> vehicleType;
+            $description = $quoteDetails -> description;
 
             $to = "{$EMAIL_ADMIN}";
             $subject = "{$EMAIL_TITLE} Quote";
@@ -193,6 +203,14 @@
                                         </td>
                                         <td>
                                             {$vehicleType}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Description:
+                                        </td>
+                                        <td>
+                                            {$description}
                                         </td>
                                     </tr>
                                 </tbody>

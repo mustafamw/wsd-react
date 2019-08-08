@@ -31,6 +31,7 @@
                 $quoteObj -> pickupTo = $pickupTo;
                 $quoteObj -> pickupDatetime = $pickupDatetime;
                 $quoteObj -> vehicleType = $vehicleType;
+                $quoteObj -> description = $description;
 
                 $quoteEmail -> quoteSubmit($quoteObj);
                 $quoteEmail -> quoteSubmitAdmin($quoteObj);
