@@ -28,11 +28,10 @@ class Service extends Component {
                   </p>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-4 col-sm-4  col-12 uk text-align-right">
-                  <img src={ukDelivery}/>
+                  <img src={ukDelivery} alt="UK Delivery"/>
                 </div>
               </div>
               <div className="display-flex">
-                
                 <div className="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12">
                   <h1>
                     World Wide Cargo Service
@@ -47,7 +46,7 @@ class Service extends Component {
                   </p>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-4 col-sm-4  col-12 globe text-align-right">
-                  <img src={globe}/>
+                  <img src={globe} alt="World Globe"/>
                 </div>
               </div>
             </div>

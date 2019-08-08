@@ -36,7 +36,7 @@ class Header extends Component {
                 <div className="nav-logo">
                   <Link to="/home">
                     <div className="logo">
-                      <img src={logo}/>
+                      <img src={logo} alt="Logo"/>
                     </div>
                     <div className="title">
                       <span className="orange">WSD</span> Courier & Cargo<br/>
@@ -45,7 +45,7 @@ class Header extends Component {
                   </Link>
                 </div>
                 <div className="burger-menu" onClick={test}>
-                  <img src={burgerMenu}/>
+                  <img src={burgerMenu} alt="Burger Menu" />
                 </div>
                 <div className="route" style={{ display: navShow ? 'block' : 'none' }}>
                   <Nav style={{ display: navShow ? 'block' : 'none' }}/>

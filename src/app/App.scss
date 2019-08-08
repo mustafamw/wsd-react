@@ -2,20 +2,27 @@
 
 $FOOTER-HEIGHT: 280px;
 
-html, body{
-    height: 100%;
-    margin: 0px;
-    padding: 0px;  
-    background: $WSD-GREY-LIGHT;
-    font-size: 20px !important;
-    color: white;
-    background: url('../assets/img/background/background.png') no-repeat center center fixed; 
-    background-color: $WSD-DARK-BLUE;
+html{
+    background: $WSD-DARK-BLUE;
+    background: url('../assets/img/background/background.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    background-color: $WSD-DARK-BLUE;
+}
+body{
+    margin: 0px;
+    padding: 0px;  
+    font-size: 20px !important;
+    color: white;
     font-family: 'Oxygen', sans-serif !important;
+    overflow: auto;
+    background: transparent;
+    height: 100%;
+
     @include respond-to(xs){
         font-size: 16px !important;
     }

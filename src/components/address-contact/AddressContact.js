@@ -5,10 +5,6 @@ import './AddressContact.scss';
 
 class AddressContact extends Component {
 
-    constructor(props){
-        super(props);
-    }
-
     render() {
         const mapStyles = {
             position: 'relative',

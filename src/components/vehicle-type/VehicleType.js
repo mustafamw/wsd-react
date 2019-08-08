@@ -17,7 +17,7 @@ class VehicleType extends Component {
         if(index && vansListData[index]){
             this.state.vanSelected = [vansListData[index]];
         }
-        this.onVehicleChange(this.state.vanSelected)
+        this.onVehicleChange(this.state.vanSelected);
     }
 
     clicked(data, boolean, index) {
@@ -34,7 +34,7 @@ class VehicleType extends Component {
                 <div className="col-12 no-padding-left no-padding-right">
                     <div className="display-flex">
                         <div className="col-2 image">
-                            <img src={img}/>
+                            <img src={img} alt={e.title}/>
                         </div>
                         <div className="col-10 info">
                             {e.title}

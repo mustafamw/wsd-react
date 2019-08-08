@@ -177,7 +177,7 @@ class QuoteForm extends Component {
                 this.setState({error: true});
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-            })
+            });
         }
     }
 
@@ -193,13 +193,13 @@ class QuoteForm extends Component {
                 value: vehicle[0].title,
                 valid: true
             }
-        })
+        });
     }
 
     onChange(e){
-        let value = e.target.value
+        let value = e.target.value;
       
-        value = value.replace(/[^0-9\-()+.]/ig, '')
+        value = value.replace(/[^0-9\-()+.]/ig, '');
       
         this.setState({
             contactNo: {
@@ -209,7 +209,7 @@ class QuoteForm extends Component {
                 min: this.state.contactNo.min,
                 max: this.state.contactNo.max
             }
-        })
+        });
     }
 
     render() {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Slider from '../../components/slider/Slider';
 import AddressContact from '../../components/address-contact/AddressContact';
 import van from '../../assets/img/vans/van.png';
-import { GoogleApiWrapper} from 'google-maps-react';
 import vansList from '../../data/van-guide.json';
 import { BrowserRouter as Route, Link } from "react-router-dom";
 import servicesList from '../../data/services.json';
@@ -12,10 +11,6 @@ import './Main.scss';
 
 class Main extends Component{
 
-  constructor(props){
-    super(props);
-  }
-
   render(){
 
     const serviceList = servicesList.map((data, index) => {
@@ -23,7 +18,7 @@ class Main extends Component{
       return (
         <div className="col-xl-2 col-md-3 col-sm-6 col-xs-6 col-6 services-container" key={index}>
           <div className="service-img">
-            <img src={img}/>
+            <img src={img} alt={data.name}/>
           </div>
           <h3>{data.name}</h3>
           <small>{data.info}</small>
@@ -37,15 +32,13 @@ class Main extends Component{
         <div className="col-xl-4 col-6 van-list" key={index}>
           <Link to="/quotes/">
             <div className="van-container">
-              <img src={img}/>
+              <img src={img} alt={data.name}/>
               <div className="title">{data.name}</div>
             </div>
           </Link>
         </div>
       );
     })
-
-
 
     return (
       <article>
@@ -64,7 +57,7 @@ class Main extends Component{
                   </p>
                 </div>
                 <div className="col-xl-6 col-md-6 col-sm-6 col-xs-12 col-12 text-align-right van-image">
-                  <img src={van}/>
+                  <img src={van} alt="van"/>
                 </div>
               </div>
             </div>

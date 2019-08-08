@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Route, Link } from "react-router-dom";
+import { BrowserRouter as Route } from "react-router-dom";
 import AddressContact from '../../components/address-contact/AddressContact';
 import ValidationService from '../../utils/validation/Validation';
 import ContactUsService from '../../services/contact-us/ContactUs';
