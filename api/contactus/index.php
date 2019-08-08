@@ -1,7 +1,9 @@
 <?php
 
     header('Content-type: application/json');
+    header("Access-Control-Allow-Origin: *");
 
+    require_once(dirname(__FILE__) . '/../../server/database/connection/connection.php');
     require(dirname(__FILE__) . '/../../server/utils/https/status/index.php');
     require(dirname(__FILE__) . '/../../server/database/insert/contactus.php');
     require(dirname(__FILE__) . '/../../server/utils/validation/email/index.php');
@@ -13,9 +15,9 @@
        !empty($_POST["subject"]) && 
        !empty($_POST["message"])))
     {
-        $email = $_POST["email"];
-        $subject = $_POST["subject"];
-        $message = $_POST["message"];
+        $email = mysqli_real_escape_string($conn, $_POST["email"]);
+        $subject = mysqli_real_escape_string($conn, $_POST["subject"]);
+        $message = mysqli_real_escape_string($conn, $_POST["message"]);
 
         $emailValid = new EmailValidation($email);
         $emailValid = $emailValid -> isEmailValid();

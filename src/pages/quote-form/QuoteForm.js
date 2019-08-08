@@ -54,6 +54,12 @@ class QuoteForm extends Component {
                 valid: true,
                 value: ''
             },
+            description: {
+                valid: undefined,
+                focus: false,
+                min: 5,
+                max: 300
+            },
             sent: false,
             error: false
         };
@@ -363,6 +369,34 @@ class QuoteForm extends Component {
                                                 </div>
                                                 <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                     <VehicleType onVehicleChange={this.onVehicleChange}/>
+                                                </div>
+                                            </div>
+                                            <input type="hidden"
+                                                id="vehicleType"
+                                                name="vehicleType"
+                                                value={this.state.vehicleType.value}/>
+                                        </div>
+                                        <div className="form-group">
+                                            <div className="display-flex">
+                                                <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+                                                    <label>
+                                                        Description:
+                                                    </label>
+                                                </div>
+                                                <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+                                                    <textarea id="description" 
+                                                              name="description"
+                                                              className={"form-control " + (this.state.description.valid === false && this.state.description.focus === false  ? "input-error" : null)}  
+                                                              onBlur={this.handleBlur} 
+                                                              onFocus={this.handleFocus}
+                                                              minLength={this.state.description.min}
+                                                              maxlength={this.state.description.max} 
+                                                              placeholder="Parcels, Pallets, Fragile goods"></textarea>
+                                                              
+                                                    {this.state.description.valid === false && this.state.description.focus === false  ? 
+                                                    <div className="input-error-text">
+                                                        Your Description character length minimum {this.state.description.min} and maximum {this.state.description.max}
+                                                    </div> : null}
                                                 </div>
                                             </div>
                                             <input type="hidden"
