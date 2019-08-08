@@ -1,7 +1,7 @@
 [
     {
         "name": "SMALL VAN",
-        "title": "Small Vans",
+        "title": "Small Van",
         "img": "small.png",
         "info": "The Small Van is most commonly used for luggage and pallets transfers, Small vans can hold up to 8 packed suitcases. The perfect van size for 1 persons luggage and easy parking.",
         "details": [
@@ -12,7 +12,7 @@
     },
     {
         "name": "MEDIUM VAN",
-        "title": "Short Wheel Base Vans",
+        "title": "Short Wheel Base Van",
         "img": "medium.png",
         "info": "The Medium Van offers a usefully Large load area without being much longer or wider than a large car. The perfect solution for transporting two peoples belongings or sofa collections.",
         "details": [
@@ -23,7 +23,7 @@
     },
     {
         "name": "LARGE VAN",
-        "title": "Long Wheel Base Vans",
+        "title": "Long Wheel Base Van",
         "img": "large.png",
         "info": "The LWB High Top Van offers a larger internal load space than any other panel van on the road and comes with a side loading door allowing for easy loading and unloading in tight locations, making this Van perfect for 1 -2 bedroom flat moves, business to business deliverys and local storage/store collections. By far most popular Van in the Man and Van industry.",
         "details": [
@@ -34,7 +34,7 @@
     },
     {
         "name": "EXTRA LARGE VAN",
-        "title": "Extra Long Wheel Base Vans",
+        "title": "Extra Long Wheel Base Van",
         "img": "extra-large.png",
         "info": "When smaller and medium-size vans do not offer enough space for trade, business or personal needs, extra large van hire is the answer. These spacious solutions provide between 15 and 17 cubic metres of room for payloads, making them ideal for self-organised home and office moves, as well as for business events.",
         "details": [

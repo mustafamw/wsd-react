@@ -14,7 +14,6 @@ class Routes extends Component {
 
     constructor(props) {
         super(props);
-        this.props.onRouteChanged(this.isPathMatch());
     }
 
     componentDidUpdate(prevProps) {

@@ -15,6 +15,8 @@ import ContactBanner from '../components/contact-banner/ContactBanner';
 import ScrollToTop from '../components/scroll-to-top/ScrollToTop';
 import NotFound from '../pages/404/404';
 import Routes from '../components/routes/Routes';
+import ReactGA from 'react-ga';
+import { Config } from '../config/config';
 
 class App extends Component {
 
@@ -24,7 +26,9 @@ class App extends Component {
       plain: '',
       path: ''
     };
+    ReactGA.initialize(Config.GA);
     this.onRouteChanged = this.onRouteChanged.bind(this);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   onRouteChanged(data) {
@@ -35,6 +39,7 @@ class App extends Component {
       this.setState({plain: ''});
       this.setState({path: data.pathname});
     }
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   render(){
