@@ -14,6 +14,7 @@ class Routes extends Component {
 
     constructor(props) {
         super(props);
+        this.onRouteChanged();
     }
 
     componentDidUpdate(prevProps) {
