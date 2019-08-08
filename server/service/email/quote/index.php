@@ -165,7 +165,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Pick up From:
+                                            Pickup from:
                                         </td>
                                         <td>
                                             {$pickupFrom}
@@ -173,7 +173,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Pick up To:
+                                            Deliver to:
                                         </td>
                                         <td>
                                             {$pickupTo}
