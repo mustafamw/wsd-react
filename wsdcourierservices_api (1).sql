@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 07, 2019 at 10:16 PM
+-- Generation Time: Aug 08, 2019 at 10:11 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -51,6 +51,7 @@ CREATE TABLE `quote` (
   `pickupTo` varchar(10) NOT NULL,
   `pickupDatetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `vehicleType` varchar(20) NOT NULL,
+  `description` varchar(300) NOT NULL,
   `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -78,13 +79,13 @@ ALTER TABLE `quote`
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `quote`
 --
 ALTER TABLE `quote`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
