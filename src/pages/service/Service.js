@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import ukDelivery from '../../assets/img/services/uk.png';
-import globe from '../../assets/img/services/globe.png';
+import VerticalSLider from '../../components/vertical-slider/VerticalSlider';
 import './Service.scss';
 
 class Service extends Component {
-  render(){
+  render() {
     return (
       <article>
         <section>
           <div className="container">
             <div className="display-flex">
-                <div className="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12">
+              <div className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                <div className="col-12">
                   <h1>
                     National Courier Service
                   </h1>
@@ -27,12 +27,8 @@ class Service extends Component {
                     </ul>
                   </p>
                 </div>
-                <div className="col-xl-6 col-lg-6 col-md-4 col-sm-4  col-12 uk text-align-right">
-                  <img src={ukDelivery} alt="UK Delivery"/>
-                </div>
-              </div>
-              <div className="display-flex">
-                <div className="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-12">
+                <div className="clear-both"></div>
+                <div className="col-12">
                   <h1>
                     World Wide Cargo Service
                   </h1>
@@ -45,15 +41,16 @@ class Service extends Component {
                     </ul>
                   </p>
                 </div>
-                <div className="col-xl-6 col-lg-6 col-md-4 col-sm-4  col-12 globe text-align-right">
-                  <img src={globe} alt="World Globe"/>
+                </div>
+                <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 slider">
+                  <VerticalSLider/>
                 </div>
               </div>
             </div>
         </section>
       </article>
-    );
-  }
-}
-
-export default Service;
+        );
+      }
+    }
+    
+    export default Service;

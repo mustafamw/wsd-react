@@ -4,7 +4,6 @@ import Footer from '../components/footer/Footer';
 import Cookies from '../components/cookies/Cookies';
 import { BrowserRouter as Router } from "react-router-dom";
 import ContactBanner from '../components/contact-banner/ContactBanner';
-import ScrollToTop from '../components/scroll-to-top/ScrollToTop';
 import Routes from '../components/routes/Routes';
 import ReactGA from 'react-ga';
 import { Config } from '../config/config';
@@ -32,21 +31,21 @@ class App extends Component {
       this.setState({path: data.pathname});
     }
     ReactGA.pageview(window.location.pathname + window.location.search);
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
   render(){
     return (
       <div className="App">
         <Router>
-          <ScrollToTop>
-            <ContactBanner/>
-            <Header/>
-            <div className={"wrap " + this.state.path + " "+ this.state.plain}>
-              <Routes onRouteChanged={this.onRouteChanged}/>
-            </div>
-            <Footer/>
-            <Cookies/>
-          </ScrollToTop>
+          <ContactBanner/>
+          <Header/>
+          <div className={"wrap " + this.state.path + " "+ this.state.plain}>
+            <Routes onRouteChanged={this.onRouteChanged}/>
+          </div>
+          <Footer/>
+          <Cookies/>
         </Router>
       </div>
     );
