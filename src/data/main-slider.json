@@ -18,5 +18,10 @@
         "img": "6.png",
         "title": "Customer Satisfaction",
         "info": "Understanding our customers’ priorities, issues and strategies helps us to design logistics solutions that best fit their needs and to invest in the right technology to deliver tangible benefits to their business."
+    },
+    {
+        "img": "7.png",
+        "title": "Dedicated Courier Service",
+        "info": "We collect & deliver your goods with the fastest available service on the same day. Drivers are dedicated to only carrying your goods on board."
     }
 ]

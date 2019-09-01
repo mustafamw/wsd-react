@@ -66,5 +66,16 @@
             "Approx. 14 cubic metres",
             "Box & flatbeds available."
         ]
+    },
+    {
+        "name": "HGV VAN",
+        "title": "HGV",
+        "img": "hgv.png",
+        "info": "Available in 7.5T, 12T and 18T",
+        "details": [
+            "7.5T",
+            "12T",
+            "18T"
+        ]
     }
 ]
