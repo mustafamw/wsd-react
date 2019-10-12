@@ -30,7 +30,7 @@ class Main extends Component{
       const img = require(`../../assets/img/vans/${data.img}`);
       return (
         <div className="col-xl-4 col-6 van-list" key={index}>
-          <Link to="/quotes/">
+          <Link to="/booking/">
             <div className="van-container">
               <img src={img} alt={data.name}/>
               <div className="title">{data.name}</div>
@@ -64,6 +64,16 @@ class Main extends Component{
             <div className="clear-both"></div>
           </div>
         </section>
+        <section className="white">
+          <div className="container">
+            <div className="col-xl-12"> 
+              <h2 className="text-align-center">Make a Booking (Starting price from £35)</h2>
+            </div>
+            <div className="display-flex">
+              {vanList}
+            </div>
+          </div>
+        </section>
         <Slider/>
         <section className="blue">
           <div className="container text-align-center">
@@ -74,16 +84,6 @@ class Main extends Component{
               {serviceList}
             </div>
             <div className="clear-both"></div>
-          </div>
-        </section>
-        <section className="white">
-          <div className="container">
-            <div className="col-xl-12"> 
-              <h2 className="text-align-center">Van Sizes Guide</h2>
-            </div>
-            <div className="display-flex">
-              {vanList}
-            </div>
           </div>
         </section>
         <section className="purple">

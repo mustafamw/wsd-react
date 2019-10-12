@@ -12,6 +12,9 @@ class Nav extends Component{
               <NavLink to="/home" activeClassName="active">Home</NavLink>
             </li>
             <li>
+              <NavLink to="/booking/" activeClassName="active">Booking</NavLink>
+            </li>
+            <li>
               <NavLink to="/services/" activeClassName="active">Services</NavLink>
             </li>
             <li>

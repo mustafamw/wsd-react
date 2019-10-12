@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import { Config } from '../../config/config';
 import './AddressContact.scss';
+import googleMapImg from '../../assets/img/resource/map.png';
 
 class AddressContact extends Component {
 
@@ -18,12 +19,8 @@ class AddressContact extends Component {
             <div className="col-12 address-contact-container no-padding-left no-padding-right">
                 <div className="display-flex">
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 address-map no-padding-left">
-                        <Map google={this.props.google}
-                            zoom={16}
-                            style={mapStyles}
-                            initialCenter={{ lat: 52.5782433, lng: -1.9924173 }}>
-                            <Marker position={{ lat: 52.5782433, lng: -1.9924173 }} />
-                        </Map>
+                        <img src={googleMapImg} alt="Google Map" title="Google Map"/>
+                        <div className="clear-both"></div>
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 address-info">
                         <h2 className={"text-align-center " + showTitle ? "" : "hide" }>Where to find us?</h2>
