@@ -67,7 +67,7 @@ class Main extends Component{
         <section className="white">
           <div className="container">
             <div className="col-xl-12"> 
-              <h2 className="text-align-center">Make a Booking (Starting price from £35)</h2>
+              <h2 className="text-align-center">Make a Booking (Prices start from £35, UK Nation Wide Same Day Delivery)</h2>
             </div>
             <div className="display-flex">
               {vanList}
