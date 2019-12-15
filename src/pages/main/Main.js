@@ -27,17 +27,19 @@ class Main extends Component{
     });
 
     const vanList = vansList.map((data, index) => {
-      const img = require(`../../assets/img/vans/${data.img}`);
-      return (
-        <div className="col-xl-4 col-6 van-list" key={index}>
-          <Link to="/booking/">
-            <div className="van-container">
-              <img src={img} alt={data.name}/>
-              <div className="title">{data.name}</div>
-            </div>
-          </Link>
-        </div>
-      );
+      if(data.name !== 'HGV'){
+        const img = require(`../../assets/img/vans/${data.img}`);
+        return (
+          <div className="col-xl-4 col-6 van-list" key={index}>
+            <Link to="/booking/">
+              <div className="van-container">
+                <img src={img} alt={data.name}/>
+                <div className="title">{data.name}</div>
+              </div>
+            </Link>
+          </div>
+        );
+      }
     })
 
     return (
