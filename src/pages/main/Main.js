@@ -53,9 +53,11 @@ class Main extends Component{
               <div className="display-flex">
                 <div className="col-xl-6 col-md-6 col-sm-6 col-xs-12 col-12 van-info">
                   <p>
-                    WSD Courier & Cargo has been proudly providing high quality same day delivery service throughout the UK since 2009. What differentiates 
-                    us from other services is our ability to truly connect with our customers, and provide the exceptional, compassionate service they deserve. 
-                    To learn more, simply browse through our site.   
+                  WSD Courier & Cargo has been proudly providing high quality same day delivery service throughout the UK, 
+                  Europe and Worldwide since 2009. What differentiates us from other services is our ability to truly connect with our customers, 
+                  and provide the exceptional, compassionate serve they deserve. For all your delivery requirements, we are your logistics partners 
+                  from collection to delivery, anywhere in the UK, Europe & Worldwide. Same day Courier Specialists, Next day, timed deliveries. 
+                  To find out more, simply browse through our site.  
                   </p>
                 </div>
                 <div className="col-xl-6 col-md-6 col-sm-6 col-xs-12 col-12 text-align-right van-image">

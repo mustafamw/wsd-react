@@ -18,7 +18,7 @@ class ContactBanner extends Component {
                         07861304990
                     </div>
                     <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 text-align-right no-padding-right">
-                        <Social/>
+                        Find us on <Social/>
                     </div>
                 </div>
             </div>
