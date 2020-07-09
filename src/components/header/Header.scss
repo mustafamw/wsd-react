@@ -1,0 +1,108 @@
+@import '../../scss/global/global';
+
+header{
+    overflow: hidden;
+    background: white;
+
+    .container, .nav-container{
+        position: relative;
+    }
+
+    .nav-logo{
+        float: left;
+        .logo{
+            float: left;
+            margin-top: 8px;
+            margin-right: 5px;
+            img{
+                width: 70px;
+                @include respond-to(xxs){
+                    width: 50px;
+                    margin-top: -2px;
+                }
+            }
+        }
+    
+        .title{
+            font-weight: bold;
+            padding-top: 25px;
+            color: black;
+            width: 300px;
+            .orange{
+                color: $WSD-ORANGE-DARK;
+            }
+            @include respond-to(xxs){
+                padding-top: 15px;
+                width: 230px;
+                font-size: 17px;
+            }
+            small{
+                font-size: 14px;
+                position: relative;
+                top: -10px;
+                font-style: italic;
+                @include respond-to(xxs){
+                    font-size: 12px;
+                    top: -6px;
+                }
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+
+    .burger-menu{
+        float: right;
+        margin-top: 22px;
+        cursor: pointer;
+        @include respond-to(xl){
+            display: none;
+        }
+        @include respond-to(lg){
+            display: none;
+        }
+        @include respond-to(md){
+            display: none;
+        }
+        @include respond-to(sm){
+            display: none;
+        }
+        @include respond-to(xxs){
+            margin-top: 18px;
+        }
+    }
+    .route{
+        position: absolute;
+        right: 15px;
+        bottom: 0px;
+        @include respond-to(xl){
+            display: block !important;
+        }
+        @include respond-to(lg){
+            display: block !important;
+        }
+        @include respond-to(md){
+            display: block !important;
+        }
+        @include respond-to(sm){
+            display: block !important;
+        }
+        @include respond-to(xs){
+            position: relative;
+            padding: 0px;
+            clear: both;
+            padding-top: 5px;
+            margin-bottom: -5px;
+            right: 0px;
+        }
+        @include respond-to(xxs){
+            position: relative;
+            padding: 0px;
+            clear: both;
+            padding-top: 5px;
+            margin-bottom: -5px;
+            right: 0px;
+        }
+    }
+}

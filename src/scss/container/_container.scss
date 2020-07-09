@@ -1,0 +1,30 @@
+@import '../variables/variables';
+
+.container{
+    margin: auto;
+    width: 1300px;
+    padding-left: 0px;
+    padding-right: 0px;
+    word-break: break-word;
+
+    @include respond-to(xxs){
+        width: 100%;
+        max-width: 100%;
+    }
+    @include respond-to(xs){
+        width: 100%;
+        max-width: 100%;
+    }
+    @include respond-to(sm){
+        width: 100%;
+        max-width: 100%;
+    }
+    @include respond-to(md){
+        width: 100%;
+        max-width: 100%;
+    }
+    @include respond-to(lg){
+        width: 100%;
+        max-width: 100%;
+    }
+}

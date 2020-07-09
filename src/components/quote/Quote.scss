@@ -1,0 +1,68 @@
+@import '../../scss/global/global';
+
+.quote-list-container{
+    .quote-list{
+        display: flex;
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        background: #012635;
+        color: white;
+        box-shadow: 0px 0px 6px black;
+        padding: 0px;
+        cursor: pointer;
+        @include transition(all 0.5s ease-in-out);
+        .image{
+            position: relative;
+            overflow: hidden;
+            background: white;
+            cursor: pointer;
+            img{
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                cursor: pointer;
+                @include transition(all 1s ease-in-out);
+                transform: scale(0.6);
+                @include respond-to(xxs){
+                    position: relative;
+                }
+            }
+        }
+        ul{
+            margin-top: 15px;
+            list-style: none;
+            padding: 0px;
+            cursor: pointer;
+        }
+        @include respond-to(xxs){
+            display: block;
+            padding: 0px;
+        }
+    }
+}
+
+.quote-list-container:hover{
+    .quote-list{
+        text-decoration: none;
+        transform: scale(1.02);
+        .image{
+            img{
+                transform: scale(0.7);
+            }
+        }
+        button{
+            &.blue{
+                background: #0090ff;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}

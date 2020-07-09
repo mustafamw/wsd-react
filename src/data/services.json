@@ -1,0 +1,32 @@
+[
+    {
+        "name": "UK Mainland Collections & Deliveries",
+        "img": "8.png",
+        "info": "Network of approved couriers across the UK."
+    },
+    {
+        "name": "Same Day, Next Day or Timed Deliveries",
+        "img": "7.png",
+        "info": "Tailored to suit your requirements"
+    },
+    {
+        "name": "Envelopes, Pallets & EVERYTHING In Between",
+        "img": "6.png",
+        "info": "However big or small the consignment is, we can deliver it"
+    },
+    {
+        "name": "Fully Insured Consignments",
+        "img": "4.png",
+        "info": "Goods In Transit & Public Liability"
+    },
+    {
+        "name": "One Person Contactable Throughout",
+        "img": "3.png",
+        "info": "Direct from our office, from collection through to delivery"
+    },
+    {
+        "name": "Hand to Hand Bespoke Delivery",
+        "img": "1.png",
+        "info": "The personal touch goes a long way"
+    }
+]

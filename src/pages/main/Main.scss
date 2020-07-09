@@ -1,0 +1,162 @@
+@import '../../scss/global/global';
+
+section{
+
+    &.grey-black {
+        background: #1d1d1d;
+        color: white;
+    }
+
+    &.blue{
+        background: $WSD-BLUE;
+        color: white;
+    }
+    &.orange{
+        background: $WSD-ORANGE;
+        color: white;
+    }
+    &.red{
+        background: $WSD-RED;
+        color: white;
+    }
+    &.purple{
+        background: $WSD-PURPLE;
+        color: white;
+    }
+    &.white{
+        background: $WSD-WHITE;
+        color: black;
+    }
+
+    &.van-info{
+        background: url('../../assets/img/resource/hgv-section.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 350px;
+        background-position: bottom;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 24px;
+        @include respond-to(xxs){
+            font-size: 20px;
+        }
+        @include respond-to(xs){
+            font-size: 20px;
+        }
+    }
+
+    .container{
+        .grid-title{
+            text-align: left;
+            @include respond-to(xxs){
+                text-align: center;
+            }
+        }
+        .van-image{
+            float: right;
+            img{
+                width: 100%;
+                margin-top: -40px;
+            }
+            @include respond-to(xxs){
+                float: left;
+            }
+        }
+        .services-container{
+            .service-img{
+                margin-bottom: -30px;
+                img{
+                    width: 100%;
+                }
+            }
+            h3{
+                padding-bottom: 5px;
+            }
+            small{
+                float: left;
+                line-height: 20px;
+                margin-bottom: 15px;
+                font-style: italic;
+            }
+        }
+        .van-list{
+            a{
+                text-decoration: none;
+            }
+        }
+        .van-container{
+            margin-bottom: 10px;
+            cursor: pointer;
+            img{
+                width: 100%;
+                border: 2px solid #f3f3f3;
+            }
+            .title{
+                background: #000000ab;
+                border: 2px solid #545454;
+                color: white;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+        .van-container:hover{
+            text-decoration: none;
+            img{
+                border: 2px solid black;
+            }
+            .title{
+                background: black;
+                border: 2px solid black;
+                text-decoration: none;
+            }
+        }
+        p{
+            text-shadow: 0px 0px 1px #fff;
+        }
+        .need-today{
+            h3{
+                text-decoration: underline;
+            }
+        }
+
+        ul.bespoke-tags {
+            list-style: none;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            li {
+                float: left;
+                color: white;
+                margin: 1%;
+                min-height: 50px;
+                box-sizing: border-box;
+                padding: 10px;
+                border: 1px solid #ffffffb0;
+                font-weight: bold;
+            }
+        }
+
+        .book-now {
+            width: 320px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    }
+    &.address-info{
+        background: url('../../assets/img/resource/warehouse2.jpg'); 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center; 
+        .container{
+            background: #000000bd;
+        }
+    }
+
+    .padding-top-100{
+        padding-top: 100px;
+    }
+}

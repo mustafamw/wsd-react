@@ -1,0 +1,136 @@
+@import '../responsive/responsive';
+
+.clear-both{
+    clear: both;
+}
+
+.margin-center{
+    margin: auto;
+}
+
+.text-align-center{
+    text-align: center !important;
+}
+
+.text-align-left{
+    text-align: left;
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+.display-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8{
+    font-weight: bold;
+    padding-top: $PADDING;
+    padding-bottom: $PADDING;
+    margin: 0px;
+    line-height: initial;
+}
+
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1em;
+}
+h4{
+    font-size: 0.8em;
+}
+h5{
+    font-size: 0.6em;
+}
+h6{
+    font-size: 0.4em;
+}
+
+
+@include respond-to(xxs){
+    h1{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    h4{
+        font-size: 0.7em;
+    }
+    h5{
+        font-size: 0.5em;
+    }
+    h6{
+        font-size: 0.4em;
+    }
+}
+@include respond-to(xs){
+    h1{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    h4{
+        font-size: 0.7em;
+    }
+    h5{
+        font-size: 0.5em;
+    }
+    h6{
+        font-size: 0.4em;
+    }
+}
+
+.padding-top-5px{
+    padding-top: 5px;
+}
+
+.padding-bottom-5px{
+    padding-bottom: 5px;
+}
+
+.padding-top-15px{
+    padding-top: 15px;
+}
+
+.padding-bottom-15px{
+    padding-bottom: 15px;
+}
+
+.no-padding-top{
+    padding-top: 0px;
+}
+
+.no-padding-bottom{
+    padding-bottom: 0px;
+}
+
+.no-padding-right{
+    padding-right: 0px;
+}
+
+.no-padding-left{
+    padding-left: 0px;
+}
+
+.text-uppercase{
+    text-transform: capitalize;
+}
+::placeholder{
+    text-transform: none !important;
+}

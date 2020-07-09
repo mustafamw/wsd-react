@@ -1,0 +1,45 @@
+@import '../../scss/global/global';
+
+.sliderBox-1MmUg{
+    li{
+        position: relative;
+        margin-bottom: 30px !important;
+        background: black;
+        background: #00000033;
+        overflow: hidden;
+        .image{
+            img{
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: auto;
+                height: 100%;
+                @include respond-to(xxs){
+                    height: auto;
+                }
+            }
+        }
+        @include respond-to(xs){
+            height: 300px !important;
+        }
+        @include respond-to(xxs){
+            height: 300px !important;
+        }
+    }
+}
+.slider{
+    height: 68.4vh;
+    @include respond-to(xs){
+        height: 400px;
+    }
+    @include respond-to(xxs){
+        height: 400px;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+    }
+}

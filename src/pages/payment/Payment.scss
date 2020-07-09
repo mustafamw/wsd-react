@@ -1,0 +1,42 @@
+@import '../../scss/global/global';
+
+.payment {
+    .payments-container {
+        padding-top: 20px;
+        text-align: center;
+        display: block;
+        img.payments {
+            width: 400px;
+            @include respond-to(xxs){
+                width: 90%;
+            }
+        }
+    }
+    .white {
+        background: $WSD-GREY;
+        color: black;
+    }
+    .paypal-container {
+        color: white !important;
+
+        input {
+            max-width: 750px;
+            width: 100%;
+            padding: 10px;
+            font-size: 25px;
+            margin-bottom: 20px;
+            border: 2px solid $WSD-ORANGE; 
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    }
+    .confirmation {
+        padding: 20px;
+        text-align: center;
+        padding-bottom: 1px;
+        img {
+            width: 200px;
+        }
+    }
+}

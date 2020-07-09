@@ -1,0 +1,23 @@
+@import '../../scss/global/global';
+
+.contact-us{
+    .address-contact{
+        .address-contact-container{
+            .address-info{
+                width: 100%;
+                max-width: 100%;
+                flex: none;
+            }
+            .address-map{
+                width: 100%;
+                max-width: 100%;
+                flex: none;
+                height: 355px;
+                padding-left: 0px;
+            }
+        }
+        @include respond-to(xxs){
+            padding: 0px;
+        }
+    }
+}

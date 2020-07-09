@@ -1,0 +1,1 @@
+export const PathUrl = ["home", "booking", "bookingform", "services", "quotes", "quotes", "quotesform", "contact-us", "terms-and-conditions", "privacy-policy", "payment"];

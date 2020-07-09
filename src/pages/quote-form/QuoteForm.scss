@@ -1,0 +1,21 @@
+form{
+    width: 100%;
+    .form-group{
+        input{
+            border-radius: 0px;
+            width: 100%;
+            padding: 0px;
+            height: 0px;
+            padding: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .react-datepicker-wrapper{
+            display: block;
+            .react-datepicker__input-container{
+                display: block;
+            }
+        }
+    }
+}

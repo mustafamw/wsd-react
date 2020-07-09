@@ -1,0 +1,33 @@
+@import '../../scss/global/global';
+
+.address-contact-container{
+    .address-map {
+        position: relative;
+        clear: both;
+        overflow: hidden;
+        @include respond-to(xs){
+            padding: 0px;
+        }
+        @include respond-to(xxs){
+            padding: 0px;
+        }
+        img{
+            position: absolute;
+            width: 100%;
+            margin: auto;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            @include respond-to(xs){
+                position: relative
+            }
+            @include respond-to(xxs){
+                position: relative
+            }
+        }
+    }
+    .hide{
+        display: none;
+    }
+}
