@@ -19,7 +19,7 @@
 
             $pickupDatetimeMySql = date('Y-m-d\TH:i:s', strtotime($pickupDatetime));
 
-            $sql = "INSERT INTO quote (email, fullname, contactNo, pickupFrom, pickupTo, pickupDatetime, vehicleType, description)
+            $sql = "INSERT INTO book (email, fullname, contactNo, pickupFrom, pickupTo, pickupDatetime, vehicleType, description)
                     VALUES ('$email', '$fullname', '$contactNo', '$pickupFrom', '$pickupTo', '$pickupDatetimeMySql', '$vehicleType', '$description');";
 
             if ($conn->query($sql) === TRUE) {

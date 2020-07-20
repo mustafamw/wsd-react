@@ -55,6 +55,26 @@ CREATE TABLE `quote` (
   `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `book`
+--
+
+CREATE TABLE `book` (
+  `id` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `fullname` varchar(50) NOT NULL,
+  `contactNo` varchar(50) NOT NULL,
+  `pickupFrom` varchar(10) NOT NULL,
+  `pickupTo` varchar(10) NOT NULL,
+  `pickupDatetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `vehicleType` varchar(20) NOT NULL,
+  `description` varchar(300) NOT NULL,
+  `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 --
 -- Indexes for dumped tables
 --
@@ -72,6 +92,12 @@ ALTER TABLE `quote`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `book`
+--
+ALTER TABLE `book`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -85,6 +111,13 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `quote`
 --
 ALTER TABLE `quote`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+--
+-- AUTO_INCREMENT for table `book`
+--
+ALTER TABLE `book`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
