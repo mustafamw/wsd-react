@@ -47,17 +47,16 @@ class Routes extends Component {
     render() {
         return (
             <Switch>
-                <Route exact={true} path="/" render={() => (<Redirect to="/home" />)} />
-                <Route path="/home" exact={true} component={Main} />
-                <Route path="/booking/" exact={true} component={Booking} />
+                <Route path="/" exact={true} component={Main}/>
+                <Route path="/booking/" component={Booking} />
                 <Route path="/booking/form" exact={true} component={BookingForm} />
-                <Route path="/services/" exact={true} component={Service} />
-                <Route path="/quotes/" exact={true} component={Quotes} />
+                <Route path="/services/" component={Service} />
+                <Route path="/quotes/" component={Quotes} />
                 <Route path="/quotes/form" exact={true} component={QuotesForm} />
-                <Route path="/contact-us" exact={true} component={ContactUs} />
-                <Route path="/terms-and-conditions" exact={true} component={TermsAndConditions} />
-                <Route path="/privacy-policy" exact={true} component={PrivacyPolicy} />
-                <Route path="/payment" exact={true} component={Payment} />
+                <Route path="/contact-us" component={ContactUs} />
+                <Route path="/terms-and-conditions" component={TermsAndConditions} />
+                <Route path="/privacy-policy" component={PrivacyPolicy} />
+                <Route path="/payment" component={Payment} />
                 <Route component={NotFound} exact={false} path="*"/>
             </Switch>
         );

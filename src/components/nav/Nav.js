@@ -8,8 +8,8 @@ class Nav extends Component{
       <div className="nav-links">
         <nav>
           <ul>
-            <li>
-              <NavLink to="/home" activeClassName="active">Home</NavLink>
+          <li>
+              <NavLink exact={true} to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
               <NavLink to="/booking/" activeClassName="active">Booking</NavLink>

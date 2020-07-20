@@ -4,7 +4,7 @@ import addYears from "date-fns/addYears";
 import subDays from "date-fns/subDays";
 import VehicleType from '../../components/vehicle-type/VehicleType';
 import TechnicalError from '../../components/technical-error/TechnicalError';
-import QuoteService from '../../services/quote/Quote';
+import BookService from '../../services/book/Book';
 import ValidationService from '../../utils/validation/Validation';
 import sent from '../../assets/img/icons/sent.png';
 import "react-datepicker/dist/react-datepicker.css";
@@ -167,7 +167,7 @@ class BookingForm extends Component {
         const valid =  this.handleValidateAllField(data);
         this.setState({error: false});
         if(valid){
-            QuoteService.quote(data)
+            BookService.book(data)
             .then((data) => {
                 this.setState({error: false});
                 this.setState({sent: true});

@@ -3,7 +3,7 @@ import { BrowserRouter as Route, Switch } from "react-router-dom";
 
 export default(
     <Switch>
-        <Route path="/home"/>
+        <Route path="/"/>
         <Route path="/booking/"/>
         <Route path="/booking/form"/>
         <Route path="/services/"/>

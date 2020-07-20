@@ -48,7 +48,7 @@ class Main extends Component{
           <div className="container">
             <div>
               <div className="col-12"> 
-                <h2>About us</h2>
+                <h1>About us</h1>
               </div>
               <div className="display-flex">
                 <div className="col-12 col-xl-6 col-lg-6 col-md-6">
@@ -68,7 +68,7 @@ class Main extends Component{
         <section className="white">
           <div className="container">
             <div className="col-xl-12"> 
-              <h2 className="text-align-center">Nationwide Same Day Delivery</h2>
+              <h1 className="text-align-center">Nationwide Same Day Delivery</h1>
               <h3 className="text-align-center">Prices as low as £35</h3>
               <Link to="/booking" className="blue button book-now">Book Now</Link>
             </div>
@@ -82,7 +82,7 @@ class Main extends Component{
           <div className="container text-align-center">
             <div className="display-flex">
               <div className="col-xl-12"> 
-                <h2 className="text-align-center">Services we offer</h2>
+                <h1 className="text-align-center">Services we offer</h1>
               </div>
               {serviceList}
             </div>
@@ -93,19 +93,19 @@ class Main extends Component{
           <div className="container">
             <div className="display-flex">
               <div className="col-xl-4 col-md-4 col-sm-4 col-xs-4 col-12">
-                <h2 className="grid-title">Same Day Haulage Service</h2>
+                <h1 className="grid-title">Same Day Haulage Service</h1>
                 <p>
                   We offer same day, urgent and overnight haulage services regardless of the size of your business or the industry you operate in. Our extensive haulage network means we are able to meet your needs in a safe, secure and efficient manner.
                 </p>
               </div>
               <div className="col-xl-4 col-md-4 col-sm-4 col-xs-4 col-12">
-                <h2 className="grid-title">Extensive Fleet for All Load Sizes</h2>
+                <h1 className="grid-title">Extensive Fleet for All Load Sizes</h1>
                 <p>
                   Sameday Haulage have a modern fleet of vehicles to suit almost all your haulage and courier requirements. We ensure that the fleet is meticulously maintained and above the standard required for our FORS accreditation, as well as being a proud member of the Road Haulage Association.
                 </p>
               </div>
               <div className="col-xl-4 col-md-4 col-sm-4 col-xs-4 col-12">
-                <h2 className="grid-title">Wild Network</h2>
+                <h1 className="grid-title">Wild Network</h1>
                 <p>
                   As part of courier network we have access to over 2300 drivers giving us the ability to collect and deliver anywhere in the UK.
                 </p>
@@ -121,9 +121,9 @@ class Main extends Component{
           <div className="container">
             <div className="display-flex">
               <div className="col-12 text-align-center">
-                <h2 className="grid-title text-align-center">
+                <h1 className="grid-title text-align-center">
                   We offer a bespoke haulage/courier service tailored to our customer requirements.
-                </h2>
+                </h1>
                 <ul className="bespoke-tags">
                   <li>
                     Manufacturing & Construction
@@ -169,7 +169,7 @@ class Main extends Component{
           <div className="container">
             <div className="display-flex">
               <div className="col-12 text-align-center need-today">
-                <h2 className="text-align-center">Need it there today?</h2>
+                <h1 className="text-align-center">Need it there today?</h1>
                 <p>
                   Of course you do! For a quick, reliable delivery today, all you need do is call. Our highly trained team can find you the perfect solution right now.
                   We’re known for being a friendly and professional same day courier, so just chat through your requirements and leave the rest to us. We organise the delivery and tell you when it’s arrived. Simple.

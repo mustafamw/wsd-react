@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Header.scss';
 import Nav from '../nav/Nav';
 import logo from '../../assets/img/logo/wsd-logo.png';
-import { BrowserRouter as Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, NavLink } from "react-router-dom";
 import burgerMenu  from '../../assets/img/icons/menu.png';
 import { withRouter } from 'react-router-dom';
 
@@ -34,7 +34,7 @@ class Header extends Component {
             <div className="display-flex nav-container">
               <div className="col-12 padding-top-5px padding-bottom-5px">
                 <div className="nav-logo">
-                  <Link to="/home">
+                  <NavLink exact={true} to="/">
                     <div className="logo">
                       <img src={logo} alt="Logo"/>
                     </div>
@@ -42,7 +42,7 @@ class Header extends Component {
                       <span className="orange">WSD</span> Courier & Cargo<br/>
                       <small>Same day delivery specialists</small>
                     </div>
-                  </Link>
+                  </NavLink>
                 </div>
                 <div className="burger-menu" onClick={test}>
                   <img src={burgerMenu} alt="Burger Menu" />
