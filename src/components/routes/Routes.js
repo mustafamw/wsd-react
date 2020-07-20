@@ -48,10 +48,10 @@ class Routes extends Component {
         return (
             <Switch>
                 <Route path="/" exact={true} component={Main}/>
-                <Route path="/booking/" component={Booking} />
+                <Route path="/booking/" exact={true} component={Booking} />
                 <Route path="/booking/form" exact={true} component={BookingForm} />
                 <Route path="/services/" component={Service} />
-                <Route path="/quotes/" component={Quotes} />
+                <Route path="/quotes/" exact={true} component={Quotes} />
                 <Route path="/quotes/form" exact={true} component={QuotesForm} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/terms-and-conditions" component={TermsAndConditions} />
