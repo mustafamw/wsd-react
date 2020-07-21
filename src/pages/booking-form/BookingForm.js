@@ -415,9 +415,9 @@ class BookingForm extends Component {
                                     {this.state.sent === true ?
                                     <div className="col-xl-12 col-12 margin-center text-align-center sent">
                                         <img src={sent} alt="Sent"/>
-                                        <h2>Thank you for choosing {this.state.vehicleType.value}, your quote form has been sent and you will recieve an Email 
+                                        <h2>Thank you, you have booked for the {this.state.vehicleType.value}. You will recieve an Email 
                                         confirmation shortly, we will get back to you.</h2>
-                                        <button className="blue" onClick={this.handleBack}>Back to Quote</button>
+                                        <button className="blue" onClick={this.handleBack}>Back to Booking</button>
                                     </div> : null }
                                 </div> 
                             </div>
