@@ -41,7 +41,7 @@ class App extends Component {
         <Router>
           <ContactBanner/>
           <Header/>
-          <div className={"wrap " + this.state.path + " "+ this.state.plain}>
+          <div className={`wrap ${this.state.path === '' ? 'home': this.state.path} ${this.state.plain}`}>
             <Routes onRouteChanged={this.onRouteChanged}/>
           </div>
           <Footer/>
