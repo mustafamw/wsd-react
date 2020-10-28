@@ -22,7 +22,7 @@ class Footer extends Component {
               <div className="clear-both"></div>
               <small>
                 info@wsdcourierservices.co.uk<br/>
-                <span onClick={this.call}>
+                <span className="curser-pointer" onClick={this.call}>
                   {ContactNo}
                 </span>
               </small>

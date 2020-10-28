@@ -36,7 +36,7 @@ class AddressContact extends Component {
                             WS1 4NU<br/>
                             <h3>Contact Us:</h3>
                             info@wsdcourierservices.co.uk<br/>
-                            <span onClick={this.call}>
+                            <span className="curser-pointer" onClick={this.call}>
                                 {ContactNo}
                             </span>
                         </p>
