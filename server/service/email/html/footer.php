@@ -8,8 +8,7 @@
                 <div class=\"clear-both\"></div>
                 <small>
                     info@wsdcourierservices.co.uk<br/>
-                    01922610216<br/>
-                    07861304990
+                    0333 006 9260
                 </small>
             </div>
             <div class=\"container\">

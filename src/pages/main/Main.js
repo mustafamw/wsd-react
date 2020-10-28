@@ -5,11 +5,14 @@ import van from '../../assets/img/vans/van.png';
 import vansList from '../../data/van-guide.json';
 import { BrowserRouter as Route, Link } from "react-router-dom";
 import servicesList from '../../data/services.json';
-
-
+import { ContactNo } from '../../constant/contact-info/Telephone';
 import './Main.scss';
 
 class Main extends Component{
+
+  call() {
+    window.location.href = `tel:${ContactNo}`;
+  }
 
   render(){
 
@@ -174,7 +177,7 @@ class Main extends Component{
                   Of course you do! For a quick, reliable delivery today, all you need do is call. Our highly trained team can find you the perfect solution right now.
                   We’re known for being a friendly and professional same day courier, so just chat through your requirements and leave the rest to us. We organise the delivery and tell you when it’s arrived. Simple.
                 </p>
-                <h3>Call our team now on 01922610216</h3>
+                <h3 onClick={this.call}>Call our team now on 0333 006 9260</h3>
               </div>
             </div>
             <div className="clear-both"></div>

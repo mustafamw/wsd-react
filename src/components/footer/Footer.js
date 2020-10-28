@@ -3,9 +3,14 @@ import { BrowserRouter as Route, Link } from "react-router-dom";
 import Social from '../social/Social';
 import './Footer.scss';
 import payments from '../../assets/img/resource/payment.png';
-
+import { ContactNo } from '../../constant/contact-info/Telephone';
 
 class Footer extends Component {
+
+  call() {
+    window.location.href = `tel:${ContactNo}`;
+  }
+
   render(){
     const year = new Date().getFullYear();
     return (
@@ -17,8 +22,9 @@ class Footer extends Component {
               <div className="clear-both"></div>
               <small>
                 info@wsdcourierservices.co.uk<br/>
-                01922610216<br/>
-                07861304990
+                <span onClick={this.call}>
+                  {ContactNo}
+                </span>
               </small>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">

@@ -3,8 +3,13 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import { Config } from '../../config/config';
 import './AddressContact.scss';
 import googleMapImg from '../../assets/img/resource/map.png';
+import { ContactNo } from '../../constant/contact-info/Telephone';
 
 class AddressContact extends Component {
+
+    call() {
+        window.location.href = `tel:${ContactNo}`;
+    }
 
     render() {
         const mapStyles = {
@@ -31,8 +36,9 @@ class AddressContact extends Component {
                             WS1 4NU<br/>
                             <h3>Contact Us:</h3>
                             info@wsdcourierservices.co.uk<br/>
-                            01922610216<br/>
-                            07861304990
+                            <span onClick={this.call}>
+                                {ContactNo}
+                            </span>
                         </p>
                     </div>
                 </div>

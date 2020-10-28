@@ -20,6 +20,14 @@
     text-align: right;
 }
 
+.curser-pointer{
+    cursor: pointer;
+}
+
+.curser-pointer:hover{
+    text-decoration: underline;
+}
+
 .display-flex{
     display: flex;
     flex-direction: row;

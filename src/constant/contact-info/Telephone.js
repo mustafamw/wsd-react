@@ -1,0 +1,1 @@
+export const ContactNo = '0333 006 9260';

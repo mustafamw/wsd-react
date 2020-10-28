@@ -4,8 +4,9 @@
     background: #040f29;
     width: 100%;
     clear: both;
-    font-size: 15px;
+    font-size: 20px;
     padding: 2px;
+    font-weight: bold;
     .shares{
         float: right;
         margin-top: -1px;
@@ -28,6 +29,12 @@
         @include respond-to(xxs){
             text-align: left;
         }   
+    }
+    .telephone {
+        position: relative;
+        width: 20px;
+        margin-right: 5px;
+        top: -2px;
     }
     @include respond-to(xxs){
         font-size: 14px;
