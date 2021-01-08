@@ -95,24 +95,10 @@ class Main extends Component{
         <section className="purple">
           <div className="container">
             <div className="display-flex">
-              <div className="col-xl-4 col-md-4 col-sm-4 col-xs-4 col-12">
-                <h1 className="grid-title">Same Day Haulage Service</h1>
-                <p>
-                  We offer same day, urgent and overnight haulage services regardless of the size of your business or the industry you operate in. Our extensive haulage network means we are able to meet your needs in a safe, secure and efficient manner.
-                </p>
-              </div>
-              <div className="col-xl-4 col-md-4 col-sm-4 col-xs-4 col-12">
-                <h1 className="grid-title">Extensive Fleet for All Load Sizes</h1>
-                <p>
-                  Sameday Haulage have a modern fleet of vehicles to suit almost all your haulage and courier requirements. We ensure that the fleet is meticulously maintained and above the standard required for our FORS accreditation, as well as being a proud member of the Road Haulage Association.
-                </p>
-              </div>
-              <div className="col-xl-4 col-md-4 col-sm-4 col-xs-4 col-12">
+              <div className="col-12">
                 <h1 className="grid-title">Wild Network</h1>
                 <p>
-                  As part of courier network we have access to over 2300 drivers giving us the ability to collect and deliver anywhere in the UK.
-                </p>
-                <p>
+                  As part of courier network we have access to over 2300 drivers giving us the ability to collect and deliver anywhere in the UK. 
                   We have partners across the UK, we are local Courier with national presence.
                 </p>
               </div>
