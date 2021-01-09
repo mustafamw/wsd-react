@@ -96,7 +96,7 @@ class Main extends Component{
           <div className="container">
             <div className="display-flex">
               <div className="col-12">
-                <h1 className="grid-title">Wild Network</h1>
+                <h1 className="grid-title text-align-center">Wild Network</h1>
                 <p>
                   As part of courier network we have access to over 2300 drivers giving us the ability to collect and deliver anywhere in the UK. 
                   We have partners across the UK, we are local Courier with national presence.
