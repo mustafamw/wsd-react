@@ -17,6 +17,7 @@
                 bottom: 0;
                 width: auto;
                 height: 100%;
+                transform: translate3d(0px, 0px, 0px) rotate(0deg) !important;
                 @include respond-to(xxs){
                     height: auto;
                 }

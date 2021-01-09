@@ -3,6 +3,7 @@ import Slider from 'react-slider-light';
 import 'react-slider-light/lib/index.css';
 import './VerticalSlider.scss';
 import servicesSLider from '../../data/services-slider.json';
+import ModalImage from "react-modal-image";
 
 export default class Wrapper extends Component {
 
@@ -24,7 +25,11 @@ export default class Wrapper extends Component {
             return (
                 <div key={index}>
                     <div className="image">
-                        <img src={img} alt={e.name}/>
+                        <ModalImage
+                            small={img}
+                            large={img}
+                            alt={e.name}
+                        />
                     </div>
                     <div className="title">
                         {e.name}
