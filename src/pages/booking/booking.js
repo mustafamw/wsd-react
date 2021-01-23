@@ -27,7 +27,7 @@ class Booking extends Component {
                 <section>
                     <div className="container quotes">
                         <div className="col-xl-12 text-align-center">
-                            <h1>Booking & Quotes</h1>
+                            <h1>Booking & Quote</h1>
                             <p>Same day pallet delivery prices start from £35</p>
                             <div className="clear-both">
                                 <ul className="benefitsList">

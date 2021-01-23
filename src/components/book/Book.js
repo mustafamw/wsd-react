@@ -25,7 +25,7 @@ class Book extends Component {
                         <button className="button blue">Make a Booking</button>
                     </Link>
                     <Link to={"/booking/quotes/form?index=" + this.props.index}>
-                        <button className="button blue">Get a Quotes</button>
+                        <button className="button blue">Get a Quote</button>
                     </Link>
                 </div>
             </div>
