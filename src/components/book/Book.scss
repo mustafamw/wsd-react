@@ -22,7 +22,6 @@
                 right: 0;
                 bottom: 0;
                 width: 100%;
-                cursor: pointer;
                 @include transition(all 1s ease-in-out);
                 transform: scale(0.6);
                 @include respond-to(xxs){
