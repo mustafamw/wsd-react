@@ -3,7 +3,6 @@ import Main from '../../pages/main/Main';
 import Service from '../../pages/service/Service';
 import Booking from '../../pages/booking/booking';
 import BookingForm from '../../pages/booking-form/BookingForm';
-import Quotes from '../../pages/quotes/Quotes';
 import QuotesForm from '../../pages/quote-form/QuoteForm';
 import ContactUs from '../../pages/contact-us/ContactUs';
 import TermsAndConditions from '../../pages/terms-and-conditions/TermsAndConditions';
@@ -51,7 +50,6 @@ class Routes extends Component {
                 <Route path="/" exact={true} component={Main}/>
                 <Route path="/booking/" exact={true} component={Booking} />
                 <Route path="/booking/form" exact={true} component={BookingForm} />
-                <Route path="/booking/quotes/" exact={true} component={Quotes} />
                 <Route path="/booking/quotes/form" exact={true} component={QuotesForm} />
                 <Route path="/services/" component={Service} />
                 <Route path="/location" component={Location} />

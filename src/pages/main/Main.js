@@ -69,7 +69,9 @@ class Main extends Component{
           <div className="container">
             <div className="col-xl-12"> 
               <h1 className="text-align-center">Nationwide Same Day Delivery</h1>
-              <h3 className="text-align-center">Prices as low as £35</h3>
+              <h3 className="text-align-center">Prices from £30</h3>
+              <h3 className="text-align-center">Nationwide Next day Delivery</h3>
+              <h3 className="text-align-center">Prices from £15</h3>
               <Link to="/booking" className="blue button book-now">Book Now</Link>
             </div>
             <div className="display-flex">
@@ -152,6 +154,11 @@ class Main extends Component{
                 <p className="text-align-center">We can collect from anywhere on the UK mainland within 60 minutes of booking and deliver direct to anywhere in the UK, Ireland or Europe.</p>
                 <p className="text-align-center">Get instant quote for same day or next day delivery between any two addresses on the UK mainland (please call for a price for multiple collection or delivery points). If you’re happy with the price just give us a call to confirm it, supply us with a few details and we’ll be on our way to collect.</p>
                 <p className="text-align-center">Credit terms available for regular customers.</p>
+                <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 margin-center">
+                  <Link to={"/booking/"}>
+                      <button className="button blue">Make a Booking</button>
+                  </Link>
+                </div>
                 <h3 className="curser-pointer" onClick={this.call}>Call our team now on 0333 006 9260</h3>
               </div>
             </div>
