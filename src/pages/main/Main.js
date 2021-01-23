@@ -56,11 +56,8 @@ class Main extends Component{
               <div className="display-flex">
                 <div className="col-12 col-xl-6 col-lg-6 col-md-6">
                   <p>
-                  WSD Courier & Cargo has been proudly providing high quality same day delivery service throughout the UK, 
-                  Europe and Worldwide since 2009. What differentiates us from other services is our ability to truly connect with our customers, 
-                  and provide the exceptional, compassionate serve they deserve. For all your delivery requirements, we are your logistics partners 
-                  from collection to delivery, anywhere in the UK, Europe & Worldwide. Same day Courier Specialists, Next day, timed deliveries. 
-                  To find out more, simply browse through our site.  
+                    WSD Courier & Cargo provide a bespoke delivery solution tailored to customer requirements We are specialists in providing same day collection & delivery service nationwide from small van loads to arctic trucks.<br/><br/>
+                    Specialists in delivering on time we are your logistics partner for all your transport requirements. Just simply browse through our website to find out more. 
                   </p>
                 </div>
               </div>
@@ -92,28 +89,17 @@ class Main extends Component{
             <div className="clear-both"></div>
           </div>
         </section>
-        <section className="purple">
-          <div className="container">
-            <div className="display-flex">
-              <div className="col-12">
-                <h1 className="grid-title text-align-center">Wild Network</h1>
-                <p>
-                  As part of courier network we have access to over 2300 drivers giving us the ability to collect and deliver anywhere in the UK. 
-                  We have partners across the UK, we are local Courier with national presence.
-                </p>
-              </div>
-            </div>
-            <div className="clear-both"></div>
-          </div>
-        </section>
         <section className="orange"> 
           <div className="container">
             <div className="display-flex">
               <div className="col-12 text-align-center">
                 <h1 className="grid-title text-align-center">
-                  We offer a bespoke haulage/courier service tailored to our customer requirements.
+                  We offer a bespoke courier & haulage service tailored to our customer requirements.
                 </h1>
                 <ul className="bespoke-tags">
+                  <li>
+                    Retails
+                  </li>
                   <li>
                     Manufacturing & Construction
                   </li>
@@ -159,10 +145,13 @@ class Main extends Component{
             <div className="display-flex">
               <div className="col-12 text-align-center need-today">
                 <h1 className="text-align-center">Need it there today?</h1>
-                <p>
-                  Of course you do! For a quick, reliable delivery today, all you need do is call. Our highly trained team can find you the perfect solution right now.
-                  We’re known for being a friendly and professional same day courier, so just chat through your requirements and leave the rest to us. We organise the delivery and tell you when it’s arrived. Simple.
+                <p className="text-align-center">
+                  Of course you do! For a quick, reliable delivery today, all you need do is call.
                 </p>
+                <p className="text-align-center">Booked in 3 minutes Collected within 60 minutes Delivered direct... ASAP</p>
+                <p className="text-align-center">We can collect from anywhere on the UK mainland within 60 minutes of booking and deliver direct to anywhere in the UK, Ireland or Europe.</p>
+                <p className="text-align-center">Get instant quote for same day or next day delivery between any two addresses on the UK mainland (please call for a price for multiple collection or delivery points). If you’re happy with the price just give us a call to confirm it, supply us with a few details and we’ll be on our way to collect.</p>
+                <p className="text-align-center">Credit terms available for regular customers.</p>
                 <h3 className="curser-pointer" onClick={this.call}>Call our team now on 0333 006 9260</h3>
               </div>
             </div>

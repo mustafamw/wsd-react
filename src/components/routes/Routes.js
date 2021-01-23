@@ -9,6 +9,7 @@ import ContactUs from '../../pages/contact-us/ContactUs';
 import TermsAndConditions from '../../pages/terms-and-conditions/TermsAndConditions';
 import PrivacyPolicy from '../../pages/privacy-policy/privacy-policy';
 import Payment from '../../pages/payment/Payment';
+import Location from '../../pages/location/Location';
 import { BrowserRouter as Router, Route, Redirect, Switch, withRouter } from "react-router-dom";
 import NotFound from '../../pages/404/404';
 import { PathUrl } from '../../constant/path-url/PathUrl';
@@ -50,9 +51,10 @@ class Routes extends Component {
                 <Route path="/" exact={true} component={Main}/>
                 <Route path="/booking/" exact={true} component={Booking} />
                 <Route path="/booking/form" exact={true} component={BookingForm} />
+                <Route path="/booking/quotes/" exact={true} component={Quotes} />
+                <Route path="/booking/quotes/form" exact={true} component={QuotesForm} />
                 <Route path="/services/" component={Service} />
-                <Route path="/quotes/" exact={true} component={Quotes} />
-                <Route path="/quotes/form" exact={true} component={QuotesForm} />
+                <Route path="/location" component={Location} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/terms-and-conditions" component={TermsAndConditions} />
                 <Route path="/privacy-policy" component={PrivacyPolicy} />

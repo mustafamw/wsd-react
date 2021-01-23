@@ -7,11 +7,10 @@ export default(
         <Route path="/booking/"/>
         <Route path="/booking/form"/>
         <Route path="/services/"/>
-        <Route path="/quotes/"/>
-        <Route path="/quotes/form"/>
+        <Route path="/location/"/>
         <Route path="/contact-us"/>
         <Route path="/terms-and-conditions"/>
         <Route path="/privacy-policy"/>
-        <Route path="/Payment/"/>
+        <Route path="/payment/"/>
     </Switch>
 );

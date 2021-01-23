@@ -1,1 +1,1 @@
-export const PathUrl = ["", "booking", "bookingform", "services", "quotes", "quotes", "quotesform", "contact-us", "terms-and-conditions", "privacy-policy", "payment"];
+export const PathUrl = ["", "booking", "bookingform", "services", "quotes", "bookingquotes", "bookingquotesform", "contact-us", "terms-and-conditions", "privacy-policy", "payment", "location"];

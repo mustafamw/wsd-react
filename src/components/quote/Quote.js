@@ -12,7 +12,7 @@ class Quote extends Component {
     const img = require(`../../assets/img/vans/${this.props.quote.img}`);
     return (
         <div className="quote-list-container">
-            <Link to={"/quotes/form?index=" + this.props.index}>
+            <Link to={"/booking/quotes/form?index=" + this.props.index}>
                 <div className="quote-list col-12">
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 image no-padding-left no-padding-right">
                         <img src={img} alt={this.props.quote.title}/>

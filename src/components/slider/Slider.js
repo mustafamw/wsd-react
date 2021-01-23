@@ -18,7 +18,7 @@ class Slider extends Component {
   handleSelect(selectedIndex, e) {
     this.setState({
       index: selectedIndex,
-      direction: e.direction,
+      direction: e && e.direction,
     });
   }
 

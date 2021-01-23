@@ -34,6 +34,11 @@ class Booking extends Component {
                                     {benefitsList}
                                 </ul>
                             </div>
+                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 margin-center">
+                                <Link to={"/booking/quotes/"}>
+                                    <button className="button blue">Get a Quotes</button>
+                                </Link>
+                            </div>
                         </div>
                         <div className="col-xl-12">
                             {quotesList}
