@@ -12,7 +12,7 @@ class Nav extends Component{
               <NavLink exact={true} to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/booking/" activeClassName="active">Booking & Quotes</NavLink>
+              <NavLink to="/booking/" activeClassName="active">Booking & Quote</NavLink>
             </li>
             <li>
               <NavLink to="/services/" activeClassName="active">Services</NavLink>
